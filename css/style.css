@@ -576,8 +576,10 @@ SP画面
 /* # フォント
 ----------------------- */
 /* ===============================================*/
-/* # オープンアニメーション
+/* #Concept
 /*=============================================== */
+/* オープンアニメーション
+/*----------------------------------------------- */
 .start {
   background: #FFF;
   position: fixed;
@@ -628,9 +630,9 @@ SP画面
 
 .concept__title {
   font-family: 'Noto Sans', sans-serif;
-  font-size: 2rem;
+  font-size: 3.2rem;
   font-weight: 300;
-  line-height: 1.5;
+  line-height: 0.9375;
   letter-spacing: 0.1em;
 }
 
