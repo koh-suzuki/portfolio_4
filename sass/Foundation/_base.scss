@@ -71,10 +71,10 @@ ul {
 .section__text {
   @include f_around(1.6, 3.2, 300, 500);
 }
-.flexbox__row {
+.flexbox__start {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
 }
 
