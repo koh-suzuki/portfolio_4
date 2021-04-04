@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+JP&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,100&family=Noto+Sans+JP&family=Noto+Sans:wght@400;700&display=swap');
 /* # フォント
 ----------------------- */
 // font-family: 'Noto Sans', sans-serif;
@@ -18,7 +18,7 @@
 	z-index: 9000;
 }
   
-.start p {
+.open__text {
 	position: fixed;
 	left: 55%;
 	top: 50%;
@@ -28,14 +28,12 @@
 	width: 280px;
   color: #000;
   font-family: 'Noto Sans', sans-serif;
-  font-size: 2rem;
+  @include f_around(1.6, 3,false, 100);
 }
 
-h1 {
+.header__logo {
   font-family: 'Noto Sans', sans-serif;
-  font-weight:300;
-  letter-spacing: 2px;
-  font-size:4.8rem;
+  @include f_around(2.4, 3.6, 700, 200);
 }
 
 .header {
@@ -50,6 +48,11 @@ h1 {
   padding-right:15px;
   display:inline-block;
   vertical-align: middle;
+}
+
+.concept__title {
+  font-family: 'Noto Sans', sans-serif;
+  @include f_around(2, 3, 300, 100);
 }
 
 .inner-header {
@@ -104,14 +107,82 @@ h1 {
     transform: translate3d(85px,0,0);
   }
 }
+
+/* ===============================================*/
+/*  #about
+/*=============================================== */
+
+
+/* ===============================================*/
+/*  #service
+/*=============================================== */
+.service__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.service__item {
+  margin-right: 40px;
+}
+.last {
+  margin-right: -40px;
+}
+.service__title {
+  margin-bottom: 16px;
+}
+.service__sub__title {
+  margin-bottom: 45px;
+}
+.service__title,
+.service__sub__title,
+.service__icon {
+  text-align: center;
+}
+.service__item {
+  max-width: calc((100% / 3) - 40px);
+}
+.service__icon {
+  margin-bottom: 40px;
+  > img {
+    max-width: 98px;
+    height: 102px;
+  } 
+}
+
+/* Font
+/*----------------------- */
+.service__title,
+.service__sub__title {
+  font-family: '游ゴシック', 'Yu Gothic', YuGothic;
+}
+.service__title {
+  @include f_around(2.5, 2.5, 400, 100);
+}
+.service__sub__title {
+  @include f_around(1.4, 1.4, 400, 100);
+  color: #858585;
+}
+
+/* ===============================================*/
+/*  #works
+/*=============================================== */
+/* ===============================================*/
+/*  #contact
+/*=============================================== */
+
+
+/* ===============================================*/
+/*  max-width: 768px
+/*=============================================== */
 /*Shrinking for mobile*/
 @media (max-width: 768px) {
   .waves {
     height:40px;
     min-height:40px;
   }
-  h1 {
-    font-size:2.4rem;
+  .concept__title {
+    @include f_around(1.5, 3, false, 200);
   }
 }
 
