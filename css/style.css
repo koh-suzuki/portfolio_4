@@ -819,6 +819,11 @@ SP画面
   text-align: center;
 }
 
+.contact__item > a:hover {
+  display: block;
+  opacity: .5;
+}
+
 .contact__title {
   margin-bottom: 10px;
 }
@@ -880,6 +885,10 @@ SP画面
 
 .footer__item {
   margin-right: 2vw;
+}
+
+.footer__item > a:hover {
+  opacity: .5;
 }
 
 .copyright {

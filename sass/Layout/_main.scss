@@ -186,6 +186,10 @@
 .contact__item {
   max-width: 280px;
   text-align: center;
+  > a:hover {
+    display: block;
+    opacity: .5;
+  }
 }
 .contact__title {
   margin-bottom: 10px;

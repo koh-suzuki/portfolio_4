@@ -4,6 +4,9 @@
 }
 .footer__item {
   margin-right: 2vw;
+  > a:hover {
+    opacity: .5;
+  }
 }
 .copyright {
   text-align: right;
