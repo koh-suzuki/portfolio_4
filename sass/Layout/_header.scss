@@ -20,9 +20,6 @@
   top: 30%;
   font-family: 'Noto Sans', sans-serif;
   @include f_around(2.4, 3.9, bold, 50);
-  > a {
-    color: #333333;
-  }
 }
 .sns__wrapper {
   position: absolute;
