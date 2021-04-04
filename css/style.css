@@ -440,6 +440,13 @@ ul {
   margin-bottom: 60px;
 }
 
+.flexbox__row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
 /* ===============================================*/
 /* # Layout
 /*=============================================== */
@@ -701,23 +708,17 @@ SP画面
 /* ===============================================*/
 /*  #service
 /*=============================================== */
-.service__list {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.service__item {
-  margin-right: 40px;
-}
-
-.last {
+.service__wrapper {
   margin-right: -40px;
 }
 
+.service__item {
+  box-sizing: content-box;
+  margin-right: 40px;
+}
+
 .service__title {
-  margin-bottom: 16px;
+  padding-bottom: 16px;
 }
 
 .service__sub__title {
@@ -768,6 +769,20 @@ SP画面
 /* ===============================================*/
 /*  #works
 /*=============================================== */
+.works__list {
+  display: grid;
+  gap: 2vw;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.works__item {
+  max-width: calc((100% / 3)-2vw);
+}
+
+.works__item > img {
+  object-fit: cover;
+}
+
 /* ===============================================*/
 /*  #contact
 /*=============================================== */

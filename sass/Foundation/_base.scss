@@ -68,5 +68,11 @@ ul {
   text-align: center;
   margin-bottom: 60px;
 }
+.flexbox__row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
 
 
