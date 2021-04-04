@@ -1,0 +1,18 @@
+.footer {
+  height: 140px;
+  padding: 0 0 30px;
+}
+.footer__item {
+  margin-right: 2vw;
+}
+.copyright {
+  text-align: right;
+  > small {
+    @include f_around(1, 1, 400, 150);
+  }
+}
+
+
+.footer__item {
+  @include f_around(1.4, 2, 400, 150);
+}
