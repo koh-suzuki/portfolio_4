@@ -405,8 +405,13 @@ body {
 /* ===============================================*/
 /*  ベース
 /*=============================================== */
+p {
+  color: #333333;
+}
+
 a {
   text-decoration: none;
+  color: #333333;
 }
 
 img {
@@ -461,10 +466,6 @@ ul {
   font-weight: bold;
   line-height: 1.625;
   letter-spacing: 0.05em;
-}
-
-.header__logo > a {
-  color: #333333;
 }
 
 .sns__wrapper {
