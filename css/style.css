@@ -935,6 +935,14 @@ SP画面
   }
 }
 
+.contact__text__left {
+  text-align: left;
+}
+
+.form-group {
+  width: 50%;
+}
+
 .footer {
   height: 140px;
   padding: 0 0 30px;
