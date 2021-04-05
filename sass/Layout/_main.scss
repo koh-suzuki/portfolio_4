@@ -113,7 +113,54 @@
 /* ===============================================*/
 /*  #about
 /*=============================================== */
+.about__wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.about__catch {
+  margin-bottom: 70px;
+}
+.about__icon {
+  max-width: 200px;
+}
+.about__title {
+  float: left;
+  width: 30%;
+}
+.about__text {
+  float: right;
+  width: 70%;
+}
+.about__title,
+.about__text {
+  margin-bottom: 10px
+}
+.about__inner {
+  width: 60%;
+  display: flex;
+  flex-direction: column
+}
+.about__name {
+  margin: 20px 0 15px
+}
 
+.about__catch,
+.about__name,
+.about__title,
+.about__text {
+  font-family: '游ゴシック', 'Yu Gothic', YuGothic;;
+}
+.about__catch {
+  @include f_around(1.6, 3.2, 300, 500);
+}
+.about__title,
+.about__text,
+.about__name {
+  @include f_around(1.4, 1.9, 300, 150);
+} 
 
 /* ===============================================*/
 /*  #service

@@ -440,13 +440,6 @@ ul {
   margin-bottom: 60px;
 }
 
-.section__text {
-  font-size: 1.6rem;
-  font-weight: 300;
-  line-height: 2;
-  letter-spacing: 0.5em;
-}
-
 .flexbox__start {
   display: flex;
   flex-wrap: wrap;
@@ -726,6 +719,70 @@ SP画面
 /* ===============================================*/
 /*  #about
 /*=============================================== */
+.about__wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.about__catch {
+  margin-bottom: 70px;
+}
+
+.about__icon {
+  max-width: 200px;
+}
+
+.about__title {
+  float: left;
+  width: 30%;
+}
+
+.about__text {
+  float: right;
+  width: 70%;
+}
+
+.about__title,
+.about__text {
+  margin-bottom: 10px;
+}
+
+.about__inner {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+}
+
+.about__name {
+  margin: 20px 0 15px;
+}
+
+.about__catch,
+.about__name,
+.about__title,
+.about__text {
+  font-family: '游ゴシック', 'Yu Gothic', YuGothic;
+}
+
+.about__catch {
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 2;
+  letter-spacing: 0.5em;
+}
+
+.about__title,
+.about__text,
+.about__name {
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 1.35714;
+  letter-spacing: 0.15em;
+}
+
 /* ===============================================*/
 /*  #service
 /*=============================================== */

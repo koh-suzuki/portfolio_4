@@ -68,9 +68,6 @@ ul {
   text-align: center;
   margin-bottom: 60px;
 }
-.section__text {
-  @include f_around(1.6, 3.2, 300, 500);
-}
 .flexbox__start {
   display: flex;
   flex-wrap: wrap;
