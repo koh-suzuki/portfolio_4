@@ -152,7 +152,7 @@
 .about__name,
 .about__title,
 .about__text {
-  font-family: '游ゴシック', 'Yu Gothic', YuGothic;;
+  font-family: '游ゴシック', 'Yu Gothic', YuGothic;
 }
 .about__catch {
   @include f_around(1.6, 3.2, 300, 500);
@@ -287,6 +287,32 @@
 .contact__text__left {
   text-align: left;
 }
+.contact__form__text {
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+/* form
+/*----------------------- */
+.form__wrapper {
+  padding-bottom: 130px;
+}
 .form-group {
   width: 50%;
+}
+.resize__none {
+  resize: none
+}
+.form-label {
+  @include f_around(1.4,1.8, 300, 100);
+}
+.contact__form {
+  margin: 10px 0 20px;
+}
+.btn__contact {
+  width: 20%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 20px;
+  font-size: 1.4rem;
 }

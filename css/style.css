@@ -382,7 +382,7 @@ html {
 
 body {
   font-size: 1rem;
-  font-family: 'Noto Sans', sans-serif;
+  font-family: 'Noto Sans', sans-serif, 'Noto Sans JP', sans-serif,'游ゴシック', 'Yu Gothic', YuGothic;
 }
 
 /* main
@@ -467,7 +467,7 @@ ul {
 /* # フォント
 ----------------------- */
 .l-header__wrapper {
-  height: 30vh;
+  height: 270px;
   background-color: #ffffff;
   padding: 10px 2vw;
 }
@@ -491,7 +491,7 @@ ul {
 
 .sns__wrapper {
   position: absolute;
-  top: 9.5vh;
+  top: 35%;
   right: 10%;
   display: flex;
   align-items: center;
@@ -939,8 +939,42 @@ SP画面
   text-align: left;
 }
 
+.contact__form__text {
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+/* form
+/*----------------------- */
+.form__wrapper {
+  padding-bottom: 130px;
+}
+
 .form-group {
   width: 50%;
+}
+
+.resize__none {
+  resize: none;
+}
+
+.form-label {
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 1.28571;
+  letter-spacing: 0.1em;
+}
+
+.contact__form {
+  margin: 10px 0 20px;
+}
+
+.btn__contact {
+  width: 20%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 20px;
+  font-size: 1.4rem;
 }
 
 .footer {
