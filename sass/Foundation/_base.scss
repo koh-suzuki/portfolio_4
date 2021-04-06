@@ -24,6 +24,7 @@ html {
 body {
   font-size: 1rem;
   font-family: 'Noto Sans', sans-serif, 'Noto Sans JP', sans-serif,'游ゴシック', 'Yu Gothic', YuGothic;
+  color: #333333;
 }
 
 /* main
@@ -54,20 +55,14 @@ ul {
   list-style: none;
 }
 
-/* main
-/*----------------------- */
-.l-section__wrapper {
-  padding-bottom: 130px;
-}
-.l-section__inner {
-  max-width: 920px;
-  margin: 0 auto;
-  height: 100%;
-}
+
+
 .section__title {
   text-align: center;
   margin-bottom: 60px;
 }
+
+
 .flexbox__start {
   display: flex;
   flex-wrap: wrap;
