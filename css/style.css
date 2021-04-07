@@ -462,7 +462,7 @@ SP画面
 /*** SNSアイコン ***/
 .sns__wrapper {
   position: absolute;
-  bottom: 5%;
+  bottom: 15%;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -473,7 +473,7 @@ SP画面
 .tw__item {
   width: 30px;
   height: auto;
-  margin: 0 10px;
+  margin: 0 15px;
 }
 
 .insta__item > a,
@@ -627,107 +627,6 @@ SP画面
   }
 }
 
-/* ===============================================*/
-/* #Concept
-/*=============================================== */
-.header {
-  position: relative;
-  text-align: center;
-  background: linear-gradient(60deg, #d9f1ff 0%, #4eeaff 100%);
-  color: white;
-}
-
-.logo {
-  width: 50px;
-  fill: white;
-  padding-right: 15px;
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.concept__title {
-  font-family: 'Noto Sans', sans-serif;
-  font-size: 3.2rem;
-  font-weight: 300;
-  line-height: 0.9375;
-  letter-spacing: 0.1em;
-}
-
-.inner-header {
-  height: 65vh;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-.flex {
-  /*Flexbox for containers*/
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.waves {
-  position: relative;
-  width: 100%;
-  height: 15vh;
-  margin-bottom: -7px;
-  /*Fix for safari gap*/
-  min-height: 100px;
-  max-height: 150px;
-}
-
-/* Animation */
-.parallax > use {
-  animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
-}
-
-.parallax > use:nth-child(1) {
-  animation-delay: -2s;
-  animation-duration: 7s;
-}
-
-.parallax > use:nth-child(2) {
-  animation-delay: -3s;
-  animation-duration: 10s;
-}
-
-.parallax > use:nth-child(3) {
-  animation-delay: -4s;
-  animation-duration: 13s;
-}
-
-.parallax > use:nth-child(4) {
-  animation-delay: -5s;
-  animation-duration: 20s;
-}
-
-@keyframes move-forever {
-  0% {
-    transform: translate3d(-90px, 0, 0);
-  }
-  100% {
-    transform: translate3d(85px, 0, 0);
-  }
-}
-
-/* ===============================================*/
-/*  max-width: 768px
-/*=============================================== */
-/*Shrinking for mobile*/
-@media (max-width: 768px) {
-  .waves {
-    height: 40px;
-    min-height: 40px;
-  }
-  .concept__title {
-    font-size: 2.4rem;
-    line-height: 1.25;
-    letter-spacing: 0.2em;
-  }
-}
-
 .l-section__wrapper {
   padding-bottom: 30px;
 }
@@ -791,6 +690,10 @@ SP画面
   padding-bottom: 10px;
   margin-top: 20px;
   font-size: 1.4rem;
+}
+
+.btn__group {
+  text-align: center;
 }
 
 /* -------------------------------------
@@ -1089,12 +992,117 @@ SP画面
   }
 }
 
+/* ===============================================*/
+/* #Concept
+/*=============================================== */
+.header {
+  position: relative;
+  text-align: center;
+  background: linear-gradient(60deg, #d9f1ff 0%, #4eeaff 100%);
+  color: white;
+}
+
+.logo {
+  width: 50px;
+  fill: white;
+  padding-right: 15px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.concept__title {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 3.2rem;
+  font-weight: 300;
+  line-height: 0.9375;
+  letter-spacing: 0.1em;
+}
+
+.inner-header {
+  height: 65vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.flex {
+  /*Flexbox for containers*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.waves {
+  position: relative;
+  width: 100%;
+  height: 15vh;
+  margin-bottom: -7px;
+  /*Fix for safari gap*/
+  min-height: 100px;
+  max-height: 150px;
+}
+
+/* Animation */
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+
+@keyframes move-forever {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
+}
+
+/* ===============================================*/
+/*  max-width: 768px
+/*=============================================== */
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
+  .waves {
+    height: 40px;
+    min-height: 40px;
+  }
+  .concept__title {
+    font-size: 2.2rem;
+    line-height: 1.36364;
+    letter-spacing: 0.2em;
+  }
+}
+
 .about__wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   min-width: 300px;
   margin: 0 auto;
+}
+
+.about__catch {
+  text-align: justify;
 }
 
 .about__catch,
@@ -1139,10 +1147,10 @@ SP画面
 }
 
 .about__catch {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: 300;
-  line-height: 1.11111;
-  letter-spacing: 0.1em;
+  line-height: 1.33333;
+  letter-spacing: 0.07em;
 }
 
 .about__name,
@@ -1174,10 +1182,10 @@ SP画面
     margin-bottom: 70px;
   }
   .about__icon {
-    max-width: 280px;
+    max-width: 40%;
   }
   .about__inner {
-    max-width: 380px;
+    max-width: 50%;
   }
   .about__catch,
   .about__name,
@@ -1201,6 +1209,18 @@ SP画面
   }
 }
 
+/* -------------------------------------
+レスポンシブ min-width: 1025px; 
+----------------------------------------*/
+@media screen and (min-width: 1025px) {
+  .about__icon {
+    max-width: 40%;
+  }
+  .about__inner {
+    max-width: 50%;
+  }
+}
+
 /* ===============================================*/
 /*  #service
 /*=============================================== */
@@ -1221,6 +1241,10 @@ SP画面
 .service__sub__title,
 .service__icon {
   text-align: center;
+}
+
+.service__text {
+  text-align: justify;
 }
 
 .service__icon {

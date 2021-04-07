@@ -6,6 +6,9 @@
   min-width: 300px;
   margin: 0 auto;
 }
+.about__catch {
+  text-align: justify;
+}
 .about__catch,
 .about__icon {
   margin-bottom: 30px;
@@ -41,7 +44,7 @@
   font-family: '游ゴシック', 'Yu Gothic', YuGothic;
 }
 .about__catch {
-  @include f_around(1.8, 2, 300, 100);
+  @include f_around(1.5, 2, 300, 70);
 }
 .about__name,
 .about__title{
@@ -60,17 +63,15 @@
     align-items: flex-start;
     justify-content: space-between;
     flex-direction: unset;
-    // max-width: 100%;
-    // margin: 0 auto;
   }
   .about__catch {
     margin-bottom: 70px;
   }
   .about__icon {
-    max-width: 280px;
+    max-width: 40%;
   }
   .about__inner {
-    max-width: 380px;
+    max-width: 50%;
   }
   
   
@@ -88,4 +89,15 @@
   .about__name {
     @include f_around(1.4, 1.9, 300, 150);
   } 
+}
+/* -------------------------------------
+レスポンシブ min-width: 1025px; 
+----------------------------------------*/
+@include mq-up($breakpoint: lg) {
+  .about__icon {
+    max-width: 40%;
+  }
+  .about__inner {
+    max-width: 50%;
+  }
 }

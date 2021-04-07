@@ -24,7 +24,7 @@ SP画面
 /*** SNSアイコン ***/ 
 .sns__wrapper {
   position: absolute;
-  bottom: 5%;
+  bottom: 15%;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -34,7 +34,7 @@ SP画面
 .tw__item {
   width: 30px;
   height: auto;
-  margin: 0 10px;
+  margin: 0 15px;
   > a {
     display: block;
   }
