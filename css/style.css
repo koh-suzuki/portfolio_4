@@ -734,6 +734,9 @@ SP画面
     margin-top: 20px;
     font-size: 1.4rem;
   }
+  .btn__group {
+    text-align: left;
+  }
 }
 
 .l-thanks {
