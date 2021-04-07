@@ -403,9 +403,6 @@ body {
   letter-spacing: 0.1em;
 }
 
-/* ===============================================*/
-/*  ベース
-/*=============================================== */
 p {
   color: #333333;
 }
@@ -422,11 +419,6 @@ img {
 
 ul {
   list-style: none;
-}
-
-.section__title {
-  text-align: center;
-  margin-bottom: 60px;
 }
 
 .flexbox__start {
@@ -455,40 +447,38 @@ ul {
 /*=============================================== */
 /* # フォント
 ----------------------- */
+/* ------------------------------
+SP画面
+------------------------------- */
 .l-header__wrapper {
-  height: 270px;
+  height: 140px;
   background-color: #ffffff;
   padding: 10px 2vw;
 }
 
 .header__inner {
   position: relative;
-  max-width: 920px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  min-width: 320px;
   margin: 0 auto;
   height: 100%;
 }
 
-.header__logo {
-  position: absolute;
-  top: 30%;
-  font-family: 'Noto Sans', sans-serif;
-  font-size: 2.4rem;
-  font-weight: bold;
-  line-height: 1.625;
-  letter-spacing: 0.05em;
-}
-
+/*** SNSアイコン ***/
 .sns__wrapper {
   position: absolute;
-  top: 35%;
-  right: 10%;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   align-items: center;
 }
 
 .insta__item,
 .tw__item {
-  width: 22px;
+  width: 30px;
   height: auto;
   margin: 0 10px;
 }
@@ -498,38 +488,11 @@ ul {
   display: block;
 }
 
-.header__nav {
-  position: absolute;
-  bottom: 10%;
-  right: 0%;
-}
-
-.header__list {
-  display: flex;
-  align-items: center;
-}
-
-.header__item {
-  margin-left: 2vw;
-  font-size: 1.6rem;
-  font-weight: bold;
-  line-height: 1.5;
-  letter-spacing: 0.005em;
-}
-
-.header__item > a {
-  color: #333333;
-  padding: 5px;
-}
-
-.header__item > a:hover {
-  border-bottom: 2px solid yellow;
-}
-
+/**********************/
 /* ハンバーガーメニュー
 --------------------------- */
 .menu {
-  display: none;
+  display: block;
   width: 30px;
   height: 39px;
   position: relative;
@@ -545,7 +508,7 @@ ul {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #fff;
+  background-color: #000000;
 }
 
 .bar__top {
@@ -578,83 +541,101 @@ ul {
   transition: transform .3s;
 }
 
-/* ------------------------------
-SP画面
-------------------------------- */
-/* ハンバーガーメニューの全画面表示
-  ------------------------------------------- */
-/* # フォント
------------------------ */
-.l-section__wrapper {
-  padding-bottom: 130px;
+.header__nav {
+  display: none;
 }
 
-.l-section__inner {
-  min-width: 320px;
-  margin: 0 auto;
-  height: 100%;
+/* スマホ画面 フォント
+------------------------------------------ */
+.header__logo {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: 0.05em;
 }
 
 /* --------------------------------------
 レスポンシブ min-width: 600px; 
 ----------------------------------------*/
 @media screen and (min-width: 600px) {
-  .l-section__inner {
-    min-width: 600px;
+  /* ハンバーガーメニューの全画面表示
+  ------------------------------------------- */
+  /* ------------------------------
+タブレット画面
+------------------------------- */
+  .l-header__wrapper {
+    height: 270px;
+    background-color: #ffffff;
+    padding: 10px 2vw;
+  }
+  .header__inner {
+    position: relative;
+    max-width: 920px;
     margin: 0 auto;
     height: 100%;
   }
-}
-
-/* --------------------------------------
-レスポンシブ min-width: 1025px; 
-----------------------------------------*/
-@media screen and (min-width: 1025px) {
-  .l-section__inner {
-    min-width: 1025px;
-    margin: 0 auto;
-    height: 100%;
+  .header__logo {
+    position: absolute;
+    top: 30%;
+  }
+  .sns__wrapper {
+    position: absolute;
+    top: 35%;
+    right: 10%;
+    display: flex;
+    align-items: center;
+  }
+  .insta__item,
+  .tw__item {
+    width: 22px;
+    height: auto;
+    margin: 0 10px;
+  }
+  .insta__item > a,
+  .tw__item > a {
+    display: block;
+  }
+  .header__nav {
+    display: block;
+    position: absolute;
+    bottom: 10%;
+    right: 0%;
+  }
+  .menu {
+    display: none;
+  }
+  .header__list {
+    display: flex;
+    align-items: center;
+  }
+  .header__item {
+    margin-left: 2vw;
+    font-size: 1.6rem;
+    font-weight: bold;
+    line-height: 1.5;
+    letter-spacing: 0.005em;
+  }
+  .header__item > a {
+    color: #333333;
+    padding: 5px;
+  }
+  .header__item > a:hover {
+    border-bottom: 2px solid yellow;
+  }
+  /* タブレット画面用フォント */
+  .header__logo {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 0.2em;
   }
 }
 
 /* ===============================================*/
 /* #Concept
 /*=============================================== */
-/* オープンアニメーション
-/*----------------------------------------------- */
-.start {
-  background: #FFF;
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: 9000;
-}
-
-.open__text {
-  position: fixed;
-  left: 55%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  display: none;
-  z-index: 9999;
-  width: 280px;
-  color: #000;
-  font-family: 'Noto Sans', sans-serif;
-  font-size: 1.6rem;
-  line-height: 1.875;
-  letter-spacing: 0.1em;
-}
-
-.header__logo {
-  font-family: 'Noto Sans', sans-serif;
-  font-size: 2.4rem;
-  font-weight: 700;
-  line-height: 1.5;
-  letter-spacing: 0.2em;
-}
-
 .header {
   position: relative;
   text-align: center;
@@ -738,209 +719,6 @@ SP画面
 }
 
 /* ===============================================*/
-/*  #about
-/*=============================================== */
-.about__wrapper {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-around;
-  max-width: 100%;
-  margin: 0 auto;
-}
-
-.about__catch {
-  margin-bottom: 70px;
-}
-
-.about__icon {
-  max-width: 200px;
-}
-
-.about__title {
-  float: left;
-  width: 30%;
-}
-
-.about__text {
-  float: right;
-  width: 70%;
-}
-
-.about__title,
-.about__text {
-  margin-bottom: 10px;
-}
-
-.about__inner {
-  width: 60%;
-  display: flex;
-  flex-direction: column;
-}
-
-.about__name {
-  margin: 20px 0 15px;
-}
-
-.about__catch,
-.about__name,
-.about__title,
-.about__text {
-  font-family: '游ゴシック', 'Yu Gothic', YuGothic;
-}
-
-.about__catch {
-  font-size: 1.6rem;
-  font-weight: 300;
-  line-height: 2;
-  letter-spacing: 0.5em;
-}
-
-.about__title,
-.about__text,
-.about__name {
-  font-size: 1.4rem;
-  font-weight: 300;
-  line-height: 1.35714;
-  letter-spacing: 0.15em;
-}
-
-/* ===============================================*/
-/*  #service
-/*=============================================== */
-.service__wrapper {
-  margin-right: -40px;
-}
-
-.service__item {
-  box-sizing: content-box;
-  margin-right: 40px;
-}
-
-.service__title {
-  padding-bottom: 16px;
-}
-
-.service__sub__title {
-  margin-bottom: 45px;
-}
-
-.service__title,
-.service__sub__title,
-.service__icon {
-  text-align: center;
-}
-
-.service__item {
-  max-width: calc((100% / 3) - 40px);
-}
-
-.service__icon {
-  margin-bottom: 40px;
-}
-
-.service__icon > img {
-  max-width: 98px;
-  height: 102px;
-}
-
-/* Font
-/*----------------------- */
-.service__title,
-.service__sub__title {
-  font-family: '游ゴシック', 'Yu Gothic', YuGothic;
-}
-
-.service__title {
-  font-size: 2.5rem;
-  font-weight: 400;
-  line-height: 1;
-  letter-spacing: 0.1em;
-}
-
-.service__sub__title {
-  font-size: 1.4rem;
-  font-weight: 400;
-  line-height: 1;
-  letter-spacing: 0.24em;
-  color: #858585;
-}
-
-.service__text {
-  font-size: 1.6rem;
-  font-weight: 300;
-  line-height: 1.25;
-  letter-spacing: 0.17em;
-}
-
-/* ===============================================*/
-/*  #works
-/*=============================================== */
-.works__list {
-  display: grid;
-  gap: 2vw;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-
-.works__item {
-  max-width: calc((100% / 3)-2vw);
-}
-
-.works__item > img {
-  object-fit: cover;
-}
-
-/* ===============================================*/
-/*  #contact
-/*=============================================== */
-.contact__item {
-  max-width: 280px;
-  text-align: center;
-}
-
-.contact__item > a:hover {
-  display: block;
-  opacity: .5;
-}
-
-.contact__title {
-  margin-bottom: 10px;
-}
-
-.contact__sub__title {
-  margin-bottom: 20px;
-}
-
-.contact__img {
-  width: 50px;
-  margin: 0 auto 20px;
-}
-
-.contact__text {
-  margin-top: 50px;
-  text-align: center;
-}
-
-.contact__title {
-  font-size: 2rem;
-  font-weight: 400;
-  line-height: 1.5;
-  letter-spacing: 0.15em;
-}
-
-.contact__sub__title {
-  color: #858585;
-}
-
-.contact__sub__title,
-.contact__text {
-  font-family: '游ゴシック', 'Yu Gothic', YuGothic;
-  font-size: 1.4rem;
-  font-weight: 300;
-  line-height: 1.42857;
-  letter-spacing: 0.25em;
-}
-
-/* ===============================================*/
 /*  max-width: 768px
 /*=============================================== */
 /*Shrinking for mobile*/
@@ -950,9 +728,54 @@ SP画面
     min-height: 40px;
   }
   .concept__title {
-    font-size: 1.5rem;
-    line-height: 2;
+    font-size: 2.4rem;
+    line-height: 1.25;
     letter-spacing: 0.2em;
+  }
+}
+
+.l-section__wrapper {
+  padding-bottom: 30px;
+}
+
+.l-section__inner {
+  padding: 0 5%;
+  height: 100%;
+}
+
+.section__title {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+/* --------------------------------------
+レスポンシブ min-width: 600px; 
+----------------------------------------*/
+@media screen and (min-width: 600px) {
+  .l-section__wrapper {
+    padding-bottom: 130px;
+  }
+  .l-section__inner {
+    min-width: 600px;
+    margin: 0 auto;
+    height: 100%;
+  }
+  .section__title {
+    margin-bottom: 60px;
+  }
+}
+
+/* --------------------------------------
+レスポンシブ min-width: 1025px; 
+----------------------------------------*/
+@media screen and (min-width: 1025px) {
+  .l-section__wrapper {
+    padding-bottom: 130px;
+  }
+  .l-section__inner {
+    min-width: 1025px;
+    margin: 0 auto;
+    height: 100%;
   }
 }
 
@@ -1128,8 +951,11 @@ SP画面
 }
 
 .footer {
-  height: 140px;
-  padding: 0 0 30px;
+  padding: 70px 0 30px;
+}
+
+.footer__nav {
+  display: none;
 }
 
 .footer__item {
@@ -1141,7 +967,38 @@ SP画面
 }
 
 .copyright {
-  text-align: right;
+  margin: 30px auto 0;
+}
+
+.footer__list__tb {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.footer__item__tb {
+  text-align: center;
+  padding: 10px;
+  border: solid 1px #ccc;
+}
+
+.footer__item__tb > a {
+  display: block;
+}
+
+.footer__item__tb > a:hover {
+  opacity: .5;
+}
+
+.footer__section__non {
+  padding: 0;
+}
+
+.footer__item,
+.footer__item__tb {
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.33333;
+  letter-spacing: 0.15em;
 }
 
 .copyright > small {
@@ -1151,14 +1008,423 @@ SP画面
   letter-spacing: 0.15em;
 }
 
-.footer__item {
-  font-size: 1.4rem;
-  font-weight: 400;
-  line-height: 1.42857;
-  letter-spacing: 0.15em;
+/* -------------------------------------
+レスポンシブ min-width: 600px; 
+----------------------------------------*/
+@media screen and (min-width: 600px) {
+  .footer {
+    height: 140px;
+    padding: 0 0 30px;
+  }
+  .footer__nav {
+    display: block;
+  }
+  .footer__item {
+    margin-right: 2vw;
+  }
+  .footer__item > a:hover {
+    opacity: .5;
+  }
+  .copyright {
+    text-align: right;
+  }
+  .copyright > small {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 0.15em;
+  }
+  .footer__list__tb {
+    display: none;
+  }
+  .footer__item {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.42857;
+    letter-spacing: 0.15em;
+  }
 }
 
 /* ===============================================*/
 /* # Object
 /*=============================================== */
+.about__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 300px;
+  margin: 0 auto;
+}
+
+.about__catch,
+.about__icon {
+  margin-bottom: 30px;
+}
+
+.about__icon {
+  max-width: 200px;
+}
+
+.about__title {
+  float: left;
+  width: 30%;
+}
+
+.about__text {
+  float: right;
+  width: 70%;
+}
+
+.about__title,
+.about__text {
+  margin-bottom: 10px;
+}
+
+.about__inner {
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.about__name {
+  margin: 20px 0 15px;
+}
+
+.about__catch,
+.about__name,
+.about__title,
+.about__text {
+  font-family: '游ゴシック', 'Yu Gothic', YuGothic;
+}
+
+.about__catch {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 2;
+  letter-spacing: 0.1em;
+}
+
+.about__title,
+.about__text,
+.about__name {
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 1.58333;
+  letter-spacing: 0.15em;
+}
+
+/* -------------------------------------
+レスポンシブ min-width: 600px; 
+----------------------------------------*/
+@media screen and (min-width: 600px) {
+  .about__wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  .about__catch {
+    margin-bottom: 70px;
+  }
+  .about__catch,
+  .about__name,
+  .about__title,
+  .about__text {
+    font-family: '游ゴシック', 'Yu Gothic', YuGothic;
+  }
+  .about__catch {
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 2;
+    letter-spacing: 0.5em;
+  }
+  .about__title,
+  .about__text,
+  .about__name {
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 1.35714;
+    letter-spacing: 0.15em;
+  }
+}
+
+/* ===============================================*/
+/*  #service
+/*=============================================== */
+.service__item {
+  box-sizing: content-box;
+  margin-bottom: 20px;
+}
+
+.service__title {
+  padding-bottom: 10px;
+}
+
+.service__sub__title {
+  margin-bottom: 10px;
+}
+
+.service__title,
+.service__sub__title,
+.service__icon {
+  text-align: center;
+}
+
+.service__icon {
+  margin-bottom: 10px;
+}
+
+.service__icon > img {
+  max-width: 98px;
+  height: 102px;
+}
+
+/* -------------------------------------
+レスポンシブ min-width: 600px; 
+----------------------------------------*/
+@media screen and (min-width: 600px) {
+  .service__wrapper {
+    margin-right: -40px;
+  }
+  .service__item {
+    box-sizing: content-box;
+    margin-right: 40px;
+  }
+  .service__title {
+    padding-bottom: 16px;
+  }
+  .service__sub__title {
+    margin-bottom: 45px;
+  }
+  .service__title,
+  .service__sub__title,
+  .service__icon {
+    text-align: center;
+  }
+  .service__item {
+    max-width: calc((100% / 3) - 40px);
+  }
+  .service__icon {
+    margin-bottom: 40px;
+  }
+  .service__icon > img {
+    max-width: 98px;
+    height: 102px;
+  }
+  /* Font
+  /*----------------------- */
+  .service__title,
+  .service__sub__title {
+    font-family: '游ゴシック', 'Yu Gothic', YuGothic;
+  }
+  .service__title {
+    font-size: 2.5rem;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 0.1em;
+  }
+  .service__sub__title {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 0.24em;
+    color: #858585;
+  }
+  .service__text {
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 1.25;
+    letter-spacing: 0.17em;
+  }
+}
+
+/* ===============================================*/
+/*  #works
+/*=============================================== */
+.works__list {
+  display: grid;
+  gap: 2vw;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.works__item {
+  max-width: calc((100% / 3)-2vw);
+}
+
+.works__item > img {
+  object-fit: cover;
+}
+
+/* -------------------------------------
+レスポンシブ min-width: 600px; 
+----------------------------------------*/
+@media screen and (min-width: 600px) {
+  .works__list {
+    display: grid;
+    gap: 2vw;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .works__item {
+    max-width: calc((100% / 3)-2vw);
+  }
+  .works__item > img {
+    object-fit: cover;
+  }
+}
+
+/* ===============================================*/
+/*  #contact
+/*=============================================== */
+.contact__item {
+  max-width: 280px;
+  text-align: center;
+}
+
+.contact__item > a:hover {
+  display: block;
+  opacity: .5;
+}
+
+.contact__title {
+  margin-bottom: 10px;
+}
+
+.contact__sub__title {
+  margin-bottom: 20px;
+}
+
+.contact__img {
+  width: 50px;
+  margin: 0 auto 20px;
+}
+
+.contact__text {
+  margin-top: 20px;
+  text-align: center;
+  padding: 0 5%;
+}
+
+.contact__title {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.15em;
+}
+
+.contact__sub__title {
+  color: #858585;
+}
+
+.contact__sub__title,
+.contact__text {
+  font-family: '游ゴシック', 'Yu Gothic', YuGothic;
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 1.42857;
+  letter-spacing: 0.25em;
+}
+
+/* -------------------------------------
+レスポンシブ min-width: 600px; 
+----------------------------------------*/
+@media screen and (min-width: 600px) {
+  .contact__item {
+    max-width: 280px;
+    text-align: center;
+  }
+  .contact__item > a:hover {
+    display: block;
+    opacity: .5;
+  }
+  .contact__title {
+    margin-bottom: 10px;
+  }
+  .contact__sub__title {
+    margin-bottom: 20px;
+  }
+  .contact__img {
+    width: 50px;
+    margin: 0 auto 20px;
+  }
+  .contact__text {
+    margin-top: 50px;
+    text-align: center;
+  }
+  .contact__title {
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.15em;
+  }
+  .contact__sub__title {
+    color: #858585;
+  }
+  .contact__sub__title,
+  .contact__text {
+    font-family: '游ゴシック', 'Yu Gothic', YuGothic;
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 1.42857;
+    letter-spacing: 0.25em;
+  }
+}
+
+/* オープンアニメーション
+/*----------------------------------------------- */
+.start {
+  background: #FFF;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 9000;
+}
+
+.open__text {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  z-index: 9999;
+  color: #000;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.875;
+  letter-spacing: 0.1em;
+}
+
+/* -------------------------------------
+レスポンシブ min-width: 600px; 
+----------------------------------------*/
+@media screen and (min-width: 600px) {
+  .open__text {
+    position: fixed;
+    left: 55%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 280px;
+  }
+}
+
+.service__flexbox {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+/* -------------------------------------
+レスポンシブ min-width: 600px; 
+----------------------------------------*/
+@media screen and (min-width: 600px) {
+  .service__flexbox {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+}
 /*# sourceMappingURL=style.css.map */

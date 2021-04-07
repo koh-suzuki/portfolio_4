@@ -1,73 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,100&family=Noto+Sans+JP&family=Noto+Sans:wght@400;700&display=swap');
-/* # フォント
------------------------ */
-// font-family: 'Noto Sans', sans-serif;
-// font-family: 'Noto Sans JP', sans-serif;
 
-/////////////////////////// 共通 /////////////////////////
-.l-section__wrapper {
-  padding-bottom: 130px;
-}
-.l-section__inner {
-  min-width: 320px;
-  margin: 0 auto;
-  height: 100%;
-}
 
-/* --------------------------------------
-レスポンシブ min-width: 600px; 
-----------------------------------------*/
-@include mq-up($breakpoint: md) {
-  .l-section__inner {
-    min-width: 600px;
-    margin: 0 auto;
-    height: 100%;
-  }
-}
-/* --------------------------------------
-レスポンシブ min-width: 1025px; 
-----------------------------------------*/
-@include mq-up($breakpoint: lg) {
-  .l-section__inner {
-    min-width: 1025px;
-    margin: 0 auto;
-    height: 100%;
-  }
-}
 //////////////////////////////// index.html ////////////////////////////////// 
 
 /* ===============================================*/
 /* #Concept
 /*=============================================== */
-/* オープンアニメーション
-/*----------------------------------------------- */
-.start {
-  background: #FFF;
-	position: fixed;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
-	z-index: 9000;
-}
-  
-.open__text {
-	position: fixed;
-	left: 55%;
-	top: 50%;
-  transform: translate(-50%, -50%);
-	display: none;
-	z-index: 9999;
-	width: 280px;
-  color: #000;
-  font-family: 'Noto Sans', sans-serif;
-  @include f_around(1.6, 3,false, 100);
-}
-
-.header__logo {
-  font-family: 'Noto Sans', sans-serif;
-  @include f_around(2.4, 3.6, 700, 200);
-}
 
 .header {
   position:relative;
@@ -141,162 +79,6 @@
   }
 }
 
-/* ===============================================*/
-/*  #about
-/*=============================================== */
-.about__wrapper {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-around;
-  max-width: 100%;
-  margin: 0 auto;
-}
-.about__catch {
-  margin-bottom: 70px;
-}
-.about__icon {
-  max-width: 200px;
-}
-.about__title {
-  float: left;
-  width: 30%;
-}
-.about__text {
-  float: right;
-  width: 70%;
-}
-.about__title,
-.about__text {
-  margin-bottom: 10px
-}
-.about__inner {
-  width: 60%;
-  display: flex;
-  flex-direction: column
-}
-.about__name {
-  margin: 20px 0 15px
-}
-
-.about__catch,
-.about__name,
-.about__title,
-.about__text {
-  font-family: '游ゴシック', 'Yu Gothic', YuGothic;
-}
-.about__catch {
-  @include f_around(1.6, 3.2, 300, 500);
-}
-.about__title,
-.about__text,
-.about__name {
-  @include f_around(1.4, 1.9, 300, 150);
-} 
-
-/* ===============================================*/
-/*  #service
-/*=============================================== */
-.service__wrapper {
-  margin-right: -40px;
-}
-.service__item {
-  box-sizing: content-box;
-  margin-right: 40px;
-}
-.service__title {
-  padding-bottom: 16px;
-}
-.service__sub__title {
-  margin-bottom: 45px;
-}
-.service__title,
-.service__sub__title,
-.service__icon {
-  text-align: center;
-}
-.service__item {
-  max-width: calc((100% / 3) - 40px);
-}
-.service__icon {
-  margin-bottom: 40px;
-  > img {
-    max-width: 98px;
-    height: 102px;
-  } 
-}
-
-/* Font
-/*----------------------- */
-.service__title,
-.service__sub__title {
-  font-family: '游ゴシック', 'Yu Gothic', YuGothic;
-}
-.service__title {
-  @include f_around(2.5, 2.5, 400, 100);
-}
-.service__sub__title {
-  @include f_around(1.4, 1.4, 400, 240);
-  color: #858585;
-}
-.service__text {
-  @include f_around(1.6, 2, 300, 170);
-}
-
-/* ===============================================*/
-/*  #works
-/*=============================================== */
-.works__list {
-  display: grid;
-  gap: 2vw;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-.works__item {
-  // max-width: 280px;
-  max-width: calc((100% / 3)-2vw);
-  > img {
-    object-fit: cover;
-  }
-}
-
-/* ===============================================*/
-/*  #contact
-/*=============================================== */
-.contact__item {
-  max-width: 280px;
-  text-align: center;
-  > a:hover {
-    display: block;
-    opacity: .5;
-  }
-}
-.contact__title {
-  margin-bottom: 10px;
-}
-.contact__sub__title {
-  margin-bottom: 20px;
-}
-.contact__img {
-  width: 50px;
-  margin: 0 auto 20px;
-}
-.contact__text {
-  margin-top: 50px;
-  text-align: center
-}
-
-
-.contact__title {
-  @include f_around(2, 3, 400, 150);
-}
-.contact__sub__title {
-  color: #858585;
-}
-.contact__sub__title,
-.contact__text {
-  font-family: '游ゴシック', 'Yu Gothic', YuGothic;
-  @include f_around(1.4, 2, 300, 250);
-}
-
 
 /* ===============================================*/
 /*  max-width: 768px
@@ -308,7 +90,51 @@
     min-height:40px;
   }
   .concept__title {
-    @include f_around(1.5, 3, false, 200);
+    @include f_around(2.4, 3, false, 200);
+  }
+}
+
+
+/////////////////////////// 共通 /////////////////////////
+.l-section__wrapper {
+  padding-bottom: 30px;
+}
+.l-section__inner {
+  padding: 0 5%;
+  height: 100%;
+}
+.section__title {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+/* --------------------------------------
+レスポンシブ min-width: 600px; 
+----------------------------------------*/
+@include mq-up($breakpoint: md) {
+  .l-section__wrapper {
+    padding-bottom: 130px;
+  }
+  .l-section__inner {
+    min-width: 600px;
+    margin: 0 auto;
+    height: 100%;
+  }
+  .section__title {
+    margin-bottom: 60px;
+  }
+}
+/* --------------------------------------
+レスポンシブ min-width: 1025px; 
+----------------------------------------*/
+@include mq-up($breakpoint: lg) {
+  .l-section__wrapper {
+    padding-bottom: 130px;
+  }
+  .l-section__inner {
+    min-width: 1025px;
+    margin: 0 auto;
+    height: 100%;
   }
 }
 

@@ -22,7 +22,6 @@
       <nav class="header__nav">
         <ul class="header__list">
           <li class="header__item"><a href="#about">About</a></li>
-          <li class="header__item"><a href="#skill">Skill</a></li>
           <li class="header__item"><a href="#service">Service</a></li>
           <li class="header__item"><a href="#works">Works</a></li>
           <li class="header__item"><a href="#contact">Contact</a></li>
@@ -117,7 +116,7 @@
     <section class="l-section__wrapper" id="service">
       <h2 class="section__title">Service</h2>
       <section class="l-section__inner ">
-        <section class="service__wrapper flexbox__start">
+        <section class="service__wrapper service__flexbox">
           <section class="service__item ">
             <h3 class="service__title">コーディング</h3>
             <p class="service__sub__title">CODING</p>
@@ -195,12 +194,12 @@
         </figure>
       </section>
     </section>
-    <section class="l-section__wrapper" id="contact">
+    <section class="l-section__wrapper contact__wrapper" id="contact">
       <h2 class="section__title">Contact</h2>
       <section class="l-section__inner flexbox__center">
         <section class="contact__item">
           <a href="/html/contact.html" target="blanc">
-            <h3 class="contact__title">Contact Form</h3>
+            <h3 class="contact__title">Form</h3>
             <figure class="contact__img">
               <img src="/img/form_icon-min.jpeg" alt="">
             </figure>
@@ -221,16 +220,35 @@
     </section>
   </main>
   <footer class="footer">
-    <section class="l-section__inner flexbox__x__center">
+    <section class="l-section__inner flexbox__x__center footer__section__non">
       <nav class="footer__nav">
         <ul class="footer__list flexbox__start">
           <li class="footer__item"><a href="#about">About</a></li>
-          <li class="footer__item"><a href="#skill">Skill</a></li>
           <li class="footer__item"><a href="#service">Service</a></li>
           <li class="footer__item"><a href="#works">Works</a></li>
           <li class="footer__item"><a href="#contact">Contact</a></li>
         </ul>
       </nav>
+      <table class="footer__list__tb">
+        <tbody class="footer__nav__tb">          
+          <tr class="footer__inner__tb">          
+            <td class="footer__item__tb">
+              <a href="#about">About</a>
+            </td>
+            <td class="footer__item__tb">
+              <a href="#service">Service</a>
+            </td>
+          </tr>
+          <tr class="footer__inner__tb">          
+            <td class="footer__item__tb">
+              <a href="#works">Works</a>
+            </td>
+            <td class="footer__item__tb">
+              <a href="#contact">Contact</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
       <p class="copyright">
         <small>&copy; 2021 AOSHIRO WORKS All rights reserved.</small>
       </p>

@@ -1,0 +1,80 @@
+/* ===============================================*/
+/*  #contact
+/*=============================================== */
+.contact__item {
+  max-width: 280px;
+  text-align: center;
+  > a:hover {
+    display: block;
+    opacity: .5;
+  }
+}
+.contact__title {
+  margin-bottom: 10px;
+}
+.contact__sub__title {
+  margin-bottom: 20px;
+}
+.contact__img {
+  width: 50px;
+  margin: 0 auto 20px;
+}
+.contact__text {
+  margin-top: 20px;
+  text-align: center;
+  padding: 0 5%
+}
+
+
+.contact__title {
+  @include f_around(2, 3, 400, 150);
+}
+.contact__sub__title {
+  color: #858585;
+}
+.contact__sub__title,
+.contact__text {
+  font-family: '游ゴシック', 'Yu Gothic', YuGothic;
+  @include f_around(1.4, 2, 300, 250);
+}
+
+/* -------------------------------------
+レスポンシブ min-width: 600px; 
+----------------------------------------*/
+@include mq-up($breakpoint: md) {
+  .contact__item {
+    max-width: 280px;
+    text-align: center;
+    > a:hover {
+      display: block;
+      opacity: .5;
+    }
+  }
+  .contact__title {
+    margin-bottom: 10px;
+  }
+  .contact__sub__title {
+    margin-bottom: 20px;
+  }
+  .contact__img {
+    width: 50px;
+    margin: 0 auto 20px;
+  }
+  .contact__text {
+    margin-top: 50px;
+    text-align: center;
+  }
+  
+  
+  .contact__title {
+    @include f_around(2, 3, 400, 150);
+  }
+  .contact__sub__title {
+    color: #858585;
+  }
+  .contact__sub__title,
+  .contact__text {
+    font-family: '游ゴシック', 'Yu Gothic', YuGothic;
+    @include f_around(1.4, 2, 300, 250);
+  }
+}

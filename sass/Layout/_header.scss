@@ -4,63 +4,47 @@
 // font-family: 'Noto Sans', sans-serif;
 // font-family: 'Noto Sans JP', sans-serif;
 
+/* ------------------------------
+SP画面
+------------------------------- */ 
 .l-header__wrapper {
-  height: 270px;
+  height: 140px;
   background-color: #ffffff;
   padding: 10px 2vw;
 }
 .header__inner {
   position: relative;
-  max-width: 920px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  min-width: 320px;
   margin: 0 auto;
   height: 100%;
 }
-.header__logo {
-  position: absolute;
-  top: 30%;
-  font-family: 'Noto Sans', sans-serif;
-  @include f_around(2.4, 3.9, bold, 50);
-}
+/*** SNSアイコン ***/ 
 .sns__wrapper {
   position: absolute;
-  top: 35%;
-  right: 10%;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   align-items: center;
 }
 .insta__item,
 .tw__item {
-  width: 22px;
+  width: 30px;
   height: auto;
   margin: 0 10px;
   > a {
     display: block;
   }
 }
-.header__nav {
-  position: absolute;
-  bottom: 10%;
-  right: 0%;
-}
-.header__list {
-  display: flex;
-  align-items: center;
-}
-.header__item {
-  margin-left: 2vw;
-  @include f_around(1.6, 2.4, bold, 5);
-  >a {
-    color: #333333;
-    padding: 5px;
-    &:hover {
-      border-bottom: 2px solid yellow;
-    }
-  }
-}
+/**********************/ 
+
 /* ハンバーガーメニュー
 --------------------------- */
 .menu {
-  display: none;
+  display: block;
   width: 30px;
   height: 39px;
   position: relative;
@@ -75,10 +59,10 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #fff;
+  background-color: #000000;
 }
-  .bar__top{
-    top: 5px;
+.bar__top{
+  top: 5px;
 }
 .bar__mid{
   top: 45%;
@@ -101,16 +85,23 @@
   transform: translate(-50%,-13px) rotate(-45deg);
   transition: transform .3s;
 }
-/* ------------------------------
-SP画面
-------------------------------- */ 
-// @include mq-down(breakpoint: md) {
-//   .header__nav {
-//     display: none;
-//   }
-//   .menu {
-//     display: block;
-//   }
+.header__nav {
+  display: none;
+}
+
+/* スマホ画面 フォント
+------------------------------------------ */
+.header__logo {
+  font-family: 'Noto Sans', sans-serif;
+  @include f_around(2.4, 3, 700, 50);
+}
+
+
+/* --------------------------------------
+レスポンシブ min-width: 600px; 
+----------------------------------------*/
+@include mq-up($breakpoint: md) {
+
   /* ハンバーガーメニューの全画面表示
   ------------------------------------------- */
   // .header__nav{
@@ -141,4 +132,69 @@ SP画面
   // body.noscroll{
   //   overflow: hidden;
   // }
-// }
+
+/* ------------------------------
+タブレット画面
+------------------------------- */ 
+  .l-header__wrapper {
+    height: 270px;
+    background-color: #ffffff;
+    padding: 10px 2vw;
+  }
+  .header__inner {
+    position: relative;
+    max-width: 920px;
+    margin: 0 auto;
+    height: 100%;
+  }
+  .header__logo {
+    position: absolute;
+    top: 30%;
+  }
+  .sns__wrapper {
+    position: absolute;
+    top: 35%;
+    right: 10%;
+    display: flex;
+    align-items: center;
+  }
+  .insta__item,
+  .tw__item {
+    width: 22px;
+    height: auto;
+    margin: 0 10px;
+    > a {
+      display: block;
+    }
+  }
+  .header__nav {
+    display: block;
+    position: absolute;
+    bottom: 10%;
+    right: 0%;
+  }
+  .menu {
+    display: none;
+  }
+  .header__list {
+    display: flex;
+    align-items: center;
+  }
+  .header__item {
+    margin-left: 2vw;
+    @include f_around(1.6, 2.4, bold, 5);
+    >a {
+      color: #333333;
+      padding: 5px;
+      &:hover {
+        border-bottom: 2px solid yellow;
+      }
+    }
+  }
+
+  /* タブレット画面用フォント */ 
+  .header__logo {
+    font-family: 'Noto Sans', sans-serif;
+    @include f_around(2.4, 3.6, 700, 200);
+  }
+}
