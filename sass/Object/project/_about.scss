@@ -3,7 +3,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  // justify-content: space-around;
   min-width: 300px;
   margin: 0 auto;
 }
@@ -59,13 +58,21 @@
   .about__wrapper {
     display: flex;
     align-items: flex-start;
-    justify-content: space-around;
-    max-width: 100%;
-    margin: 0 auto;
+    justify-content: space-between;
+    flex-direction: unset;
+    // max-width: 100%;
+    // margin: 0 auto;
   }
   .about__catch {
     margin-bottom: 70px;
   }
+  .about__icon {
+    max-width: 280px;
+  }
+  .about__inner {
+    max-width: 380px;
+  }
+  
   
   .about__catch,
   .about__name,

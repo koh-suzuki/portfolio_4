@@ -45,11 +45,11 @@
   ----------------------------------------*/
   @include mq-up($breakpoint: md) {
     .service__wrapper {
-      margin-right: -40px;
+      margin-right: -20px;
     }
     .service__item {
       box-sizing: content-box;
-      margin-right: 40px;
+      margin-right: 20px;
     }
     .service__title {
       padding-bottom: 16px;
@@ -63,7 +63,7 @@
       text-align: center;
     }
     .service__item {
-      max-width: calc((100% / 3) - 40px);
+      max-width: calc((100% / 3) - 20px);
     }
     .service__icon {
       margin-bottom: 40px;

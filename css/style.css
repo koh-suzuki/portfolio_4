@@ -753,10 +753,10 @@ SP画面
 ----------------------------------------*/
 @media screen and (min-width: 600px) {
   .l-section__wrapper {
-    padding-bottom: 130px;
+    padding-bottom: 100px;
   }
   .l-section__inner {
-    min-width: 600px;
+    padding: 0 5%;
     margin: 0 auto;
     height: 100%;
   }
@@ -1007,10 +1007,6 @@ SP画面
   opacity: .5;
 }
 
-.footer__section__non {
-  padding: 0;
-}
-
 .footer__item,
 .footer__item__tb {
   font-size: 1.8rem;
@@ -1031,11 +1027,12 @@ SP画面
 ----------------------------------------*/
 @media screen and (min-width: 600px) {
   .footer {
-    height: 140px;
-    padding: 0 0 30px;
+    padding: 0px;
   }
   .footer__nav {
     display: block;
+    padding-left: 5%;
+    margin-bottom: 100px;
   }
   .footer__item {
     margin-right: 2vw;
@@ -1044,6 +1041,7 @@ SP画面
     opacity: .5;
   }
   .copyright {
+    margin: 0;
     text-align: right;
   }
   .copyright > small {
@@ -1144,12 +1142,17 @@ SP画面
   .about__wrapper {
     display: flex;
     align-items: flex-start;
-    justify-content: space-around;
-    max-width: 100%;
-    margin: 0 auto;
+    justify-content: space-between;
+    flex-direction: unset;
   }
   .about__catch {
     margin-bottom: 70px;
+  }
+  .about__icon {
+    max-width: 280px;
+  }
+  .about__inner {
+    max-width: 380px;
   }
   .about__catch,
   .about__name,
@@ -1238,11 +1241,11 @@ SP画面
   ----------------------------------------*/
 @media screen and (min-width: 600px) {
   .service__wrapper {
-    margin-right: -40px;
+    margin-right: -20px;
   }
   .service__item {
     box-sizing: content-box;
-    margin-right: 40px;
+    margin-right: 20px;
   }
   .service__title {
     padding-bottom: 16px;
@@ -1256,7 +1259,7 @@ SP画面
     text-align: center;
   }
   .service__item {
-    max-width: calc((100% / 3) - 40px);
+    max-width: calc((100% / 3) - 20px);
   }
   .service__icon {
     margin-bottom: 40px;
@@ -1459,6 +1462,7 @@ SP画面
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: space-between;
+    flex-direction: unset;
   }
 }
 /*# sourceMappingURL=style.css.map */

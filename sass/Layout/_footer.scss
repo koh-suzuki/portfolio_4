@@ -28,9 +28,7 @@
     }
   }
 }
-.footer__section__non {
-  padding: 0;
-}
+
 
 
 .footer__item,
@@ -46,11 +44,12 @@
 ----------------------------------------*/
 @include mq-up($breakpoint: md) {
   .footer {
-    height: 140px;
-    padding: 0 0 30px;
+    padding: 0px;
   }
   .footer__nav {
     display: block;
+    padding-left: 5%;
+    margin-bottom: 100px;
   }
   .footer__item {
     margin-right: 2vw;
@@ -59,6 +58,7 @@
     }
   }
   .copyright {
+    margin: 0;
     text-align: right;
     > small {
       @include f_around(1, 1, 400, 150);
