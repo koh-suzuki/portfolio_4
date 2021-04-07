@@ -1067,12 +1067,12 @@ SP画面
 
 .about__title {
   float: left;
-  width: 30%;
+  width: 40%;
 }
 
 .about__text {
   float: right;
-  width: 70%;
+  width: 60%;
 }
 
 .about__title,
@@ -1098,19 +1098,25 @@ SP画面
 }
 
 .about__catch {
-  font-size: 1rem;
+  font-size: 1.8rem;
   font-weight: 300;
-  line-height: 2;
+  line-height: 1.11111;
   letter-spacing: 0.1em;
 }
 
-.about__title,
-.about__text,
-.about__name {
-  font-size: 1.2rem;
+.about__name,
+.about__title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.07143;
+  letter-spacing: 0.05em;
+}
+
+.about__text {
+  font-size: 1.4rem;
   font-weight: 300;
-  line-height: 1.58333;
-  letter-spacing: 0.15em;
+  line-height: 1.07143;
+  letter-spacing: 0.05em;
 }
 
 /* -------------------------------------
@@ -1180,9 +1186,38 @@ SP画面
   height: 102px;
 }
 
+/* Font
+  /*----------------------- */
+.service__title,
+.service__sub__title {
+  font-family: '游ゴシック', 'Yu Gothic', YuGothic;
+}
+
+.service__title {
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.1em;
+}
+
+.service__sub__title {
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.24em;
+  color: #858585;
+}
+
+.service__text {
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 1.42857;
+  letter-spacing: 0.17em;
+}
+
 /* -------------------------------------
-レスポンシブ min-width: 600px; 
-----------------------------------------*/
+  レスポンシブ min-width: 600px; 
+  ----------------------------------------*/
 @media screen and (min-width: 600px) {
   .service__wrapper {
     margin-right: -40px;
@@ -1211,25 +1246,6 @@ SP画面
   .service__icon > img {
     max-width: 98px;
     height: 102px;
-  }
-  /* Font
-  /*----------------------- */
-  .service__title,
-  .service__sub__title {
-    font-family: '游ゴシック', 'Yu Gothic', YuGothic;
-  }
-  .service__title {
-    font-size: 2.5rem;
-    font-weight: 400;
-    line-height: 1;
-    letter-spacing: 0.1em;
-  }
-  .service__sub__title {
-    font-size: 1.4rem;
-    font-weight: 400;
-    line-height: 1;
-    letter-spacing: 0.24em;
-    color: #858585;
   }
   .service__text {
     font-size: 1.6rem;

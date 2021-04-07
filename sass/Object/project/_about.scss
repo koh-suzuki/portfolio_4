@@ -16,11 +16,11 @@
 }
 .about__title {
   float: left;
-  width: 30%;
+  width: 40%;
 }
 .about__text {
   float: right;
-  width: 70%;
+  width: 60%;
 }
 .about__title,
 .about__text {
@@ -42,12 +42,14 @@
   font-family: '游ゴシック', 'Yu Gothic', YuGothic;
 }
 .about__catch {
-  @include f_around(1, 2, 300, 100);
+  @include f_around(1.8, 2, 300, 100);
 }
-.about__title,
-.about__text,
-.about__name {
-  @include f_around(1.2, 1.9, 300, 150);
+.about__name,
+.about__title{
+  @include f_around(1.4, 1.5, 700, 50);
+}
+.about__text{
+  @include f_around(1.4, 1.5, 300, 50);
 } 
 
 /* -------------------------------------
