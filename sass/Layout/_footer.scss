@@ -28,6 +28,12 @@
     }
   }
 }
+.footer__flexbox {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
 
 
 
@@ -44,12 +50,12 @@
 ----------------------------------------*/
 @include mq-up($breakpoint: md) {
   .footer {
-    padding: 0px;
+    padding: 0 0 30px;
+    height: 70px;
   }
   .footer__nav {
     display: block;
     padding-left: 5%;
-    margin-bottom: 100px;
   }
   .footer__item {
     margin-right: 2vw;
@@ -60,16 +66,22 @@
   .copyright {
     margin: 0;
     text-align: right;
-    > small {
-      @include f_around(1, 1, 400, 150);
-    }
   }
   .footer__list__tb {
     display: none
+  }
+  .footer__flexbox {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
   }
   
   
   .footer__item {
     @include f_around(1.4, 2, 400, 150);
+  }
+  .copyright > small {
+    @include f_around(1, 1, 400, 150);
   }
 }

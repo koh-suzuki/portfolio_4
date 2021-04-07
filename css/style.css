@@ -435,13 +435,6 @@ ul {
   justify-content: space-around;
 }
 
-.flexbox__x__center {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-}
-
 /* ===============================================*/
 /* # Layout
 /*=============================================== */
@@ -1008,6 +1001,13 @@ SP画面
   opacity: .5;
 }
 
+.footer__flexbox {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .footer__item,
 .footer__item__tb {
   font-size: 1.8rem;
@@ -1028,12 +1028,12 @@ SP画面
 ----------------------------------------*/
 @media screen and (min-width: 600px) {
   .footer {
-    padding: 0px;
+    padding: 0 0 30px;
+    height: 70px;
   }
   .footer__nav {
     display: block;
     padding-left: 5%;
-    margin-bottom: 100px;
   }
   .footer__item {
     margin-right: 2vw;
@@ -1045,14 +1045,14 @@ SP画面
     margin: 0;
     text-align: right;
   }
-  .copyright > small {
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1;
-    letter-spacing: 0.15em;
-  }
   .footer__list__tb {
     display: none;
+  }
+  .footer__flexbox {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
   }
   .footer__item {
     font-size: 1.4rem;
@@ -1060,11 +1060,35 @@ SP画面
     line-height: 1.42857;
     letter-spacing: 0.15em;
   }
+  .copyright > small {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 0.15em;
+  }
 }
 
 /* ===============================================*/
 /* # Object
 /*=============================================== */
+.btn-top {
+  width: 30px;
+  margin: 0 auto;
+}
+
+/* -------------------------------------
+レスポンシブ min-width: 600px; 
+----------------------------------------*/
+@media screen and (min-width: 600px) {
+  .to__top {
+    padding-bottom: 30px;
+  }
+  .btn-top {
+    width: 30px;
+    margin: 0 auto;
+  }
+}
+
 .about__wrapper {
   display: flex;
   flex-direction: column;
@@ -1341,6 +1365,10 @@ SP画面
   margin-top: 20px;
   text-align: center;
   padding: 0 5%;
+}
+
+.contact__wrapper {
+  padding-bottom: 70px;
 }
 
 .contact__title {
