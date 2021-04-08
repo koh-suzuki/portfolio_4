@@ -1,23 +1,51 @@
 /* ===============================================*/
 /*  #works
 /*=============================================== */
+// .works__list {
+//   display: grid;
+//   gap: 2vw;
+//   grid-template-columns: 1fr 1fr 1fr;
+// }
+// .works__item {
+//   // max-width: 280px;
+//   max-width: calc((100% / 3)-2vw);
+//   > a {
+//     display: block;
+//   }
+//   > img {
+//     object-fit: cover;
+//   }
+// }
 .works__list {
-  display: grid;
-  gap: 2vw;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: none;
 }
-.works__item {
-  // max-width: 280px;
-  max-width: calc((100% / 3)-2vw);
-  > img {
-    object-fit: cover;
-  }
+
+.slider{
+  margin: 0 auto;
+  width: 80%;
 }
+.slider img{
+  height: auto;
+  width: 100%;
+}
+/*slick setting*/
+.slick-prev:before,
+.slick-next:before {
+  color: #000;
+}
+
+
 
 /* -------------------------------------
 レスポンシブ min-width: 600px; 
 ----------------------------------------*/
 @include mq-up($breakpoint: md) {
+  .slider {
+    display: none;
+  }
+  .slick-slide img {
+    display: none;
+  }
   .works__list {
     display: grid;
     gap: 2vw;

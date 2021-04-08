@@ -78,3 +78,14 @@ $(window).on('load',function(){
 			$('body,html').animate({scrollTop:position}, '800', 'swing');
 	}
 });
+
+/* ===============================================*/
+/*  slick
+/*=============================================== */
+$(function() {
+	$('.slider').slick({
+    autoplay:true,
+    autoplaySpeed:5000,
+    dots:true,
+	});
+});
