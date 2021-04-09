@@ -22,17 +22,25 @@
       </ul>
       <nav class="header__nav">
         <ul class="header__list">
-          <li class="header__item"><a href="#about">About</a></li>
+          <li class="header__item"><a href="/html/index.html">About</a></li>
           <li class="header__item"><a href="#service">Service</a></li>
           <li class="header__item"><a href="#works">Works</a></li>
           <li class="header__item"><a href="#contact">Contact</a></li>
         </ul>
       </nav>
-      <div class="menu">
-        <span class="bar bar__top"></span>
-        <span class="bar bar__mid"></span>
-        <span class="bar bar__bottom"></span>
-      </div>
+      <nav class="hamburger__nav">
+        <ul class="hamburger__list">
+          <li class="hamburger__item"><a href="/html/contact.html">Contact</a></li>
+          <p class="hamburger__text">お仕事のご依頼・ご相談はお気軽に<br>お問い合わせください。</p>
+        </ul>
+      </nav>
+      <button type="button" id="js-buttonHamburger" class="c-button p-hamburger" aria-controls="global-nav" aria-expanded="false">
+        <span class="p-hamburger__line">
+          <span class="u-visuallyHidden">
+            メニューを開閉する
+          </span>
+        </span>
+      </button>
     </div>
   </header>
   <main class="main">
@@ -231,24 +239,26 @@
     </section>
     <section class="l-section__wrapper contact__wrapper" id="contact">
       <h2 class="section__title">Contact</h2>
-      <section class="l-section__inner flexbox__center">
-        <section class="contact__item">
-          <a href="/html/contact.html" target="blanc">
-            <h3 class="contact__title">Form</h3>
-            <figure class="contact__img">
-              <img src="/img/form_icon-min.jpeg" alt="">
-            </figure>
-            <p class="contact__sub__title">お問い合わせフォーム</p>
-          </a>
-        </section>
-        <section class="contact__item">
-          <a href="https://twitter.com/kohei39k" target="blanc">
-            <h3 class="contact__title">Twitter</h3>
-            <figure class="contact__img">
-              <img src="/img/2021 Twitter logo - black-min.png" alt="">
-            </figure>
-            <p class="contact__sub__title">ツイッターでお問い合わせ</p>
-          </a>
+      <section class="l-section__inner">
+        <section class="contact__inner flexbox__center">          
+          <section class="contact__item">
+            <a href="/html/contact.html" target="blanc">
+              <h3 class="contact__title">Form</h3>
+              <figure class="contact__img">
+                <img src="/img/form_icon-min.jpeg" alt="">
+              </figure>
+              <p class="contact__sub__title">お問い合わせフォーム</p>
+            </a>
+          </section>
+          <section class="contact__item">
+            <a href="https://twitter.com/kohei39k" target="blanc">
+              <h3 class="contact__title">Twitter</h3>
+              <figure class="contact__img">
+                <img src="/img/2021 Twitter logo - black-min.png" alt="">
+              </figure>
+              <p class="contact__sub__title">ツイッターでお問い合わせ</p>
+            </a>
+          </section>
         </section>
       </section>
       <p class="contact__text">お仕事のご依頼・ご相談はお気軽にお問い合わせください。</p>

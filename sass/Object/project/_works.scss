@@ -40,6 +40,9 @@
   .works__item {
     // max-width: 280px;
     max-width: calc((100% / 3)-2vw);
+    > a:hover {
+      opacity: .5;
+    }
     > img {
       object-fit: cover;
     }

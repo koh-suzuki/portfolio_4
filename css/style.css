@@ -481,59 +481,6 @@ SP画面
   display: block;
 }
 
-/**********************/
-/* ハンバーガーメニュー
---------------------------- */
-.menu {
-  display: block;
-  width: 30px;
-  height: 39px;
-  position: relative;
-  z-index: 3;
-  border: none;
-  margin-right: 15px;
-}
-
-.bar {
-  width: 100%;
-  height: 3px;
-  display: block;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #000000;
-}
-
-.bar__top {
-  top: 5px;
-}
-
-.bar__mid {
-  top: 45%;
-  transform: translate(-50%, -50%);
-}
-
-.bar__bottom {
-  bottom: 8px;
-}
-
-/* ハンバーガーメニューの閉じる挙動
-------------------------------------------- */
-.menu.close .bar__top {
-  transform: translate(-50%, 10px) rotate(45deg);
-  transition: transform .3s;
-}
-
-.menu.close .bar__mid {
-  opacity: 0;
-  transition: opacity .3s;
-}
-
-.menu.close .bar__bottom {
-  transform: translate(-50%, -13px) rotate(-45deg);
-  transition: transform .3s;
-}
-
 .header__nav {
   display: none;
 }
@@ -552,8 +499,6 @@ SP画面
 レスポンシブ min-width: 600px; 
 ----------------------------------------*/
 @media screen and (min-width: 600px) {
-  /* ハンバーガーメニューの全画面表示
-  ------------------------------------------- */
   /* ------------------------------
 タブレット画面
 ------------------------------- */
@@ -596,9 +541,6 @@ SP画面
     bottom: 10%;
     right: 0%;
   }
-  .menu {
-    display: none;
-  }
   .header__list {
     display: flex;
     align-items: center;
@@ -615,7 +557,8 @@ SP画面
     padding: 5px;
   }
   .header__item > a:hover {
-    border-bottom: 2px solid yellow;
+    opacity: .5;
+    cursor: pointer;
   }
   /* タブレット画面用フォント */
   .header__logo {
@@ -666,7 +609,7 @@ SP画面
     padding-bottom: 130px;
   }
   .l-section__inner {
-    min-width: 1025px;
+    max-width: 1025px;
     margin: 0 auto;
     height: 100%;
   }
@@ -994,6 +937,9 @@ SP画面
     width: 30px;
     margin: 0 auto;
   }
+  .btn-top:hover {
+    opacity: .5;
+  }
 }
 
 /* Slider */
@@ -1257,6 +1203,180 @@ SP画面
 
 .slick-arrow.slick-hidden {
   display: none;
+}
+
+.u-visuallyHidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+}
+
+.c-button {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  appearance: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.p-hamburger {
+  position: absolute;
+  top: 0;
+  right: 5%;
+  width: 40px;
+  height: 30px;
+  border-radius: 50%;
+  box-shadow: 0 0 2rem transparent;
+  outline: none;
+  transition: all .3s ease-in-out;
+  z-index: 2;
+}
+
+.p-hamburger:hover,
+.p-hamburger:focus {
+  box-shadow: 0 0 0.5rem rgba(255, 255, 255, 0.5);
+}
+
+.p-hamburger__line {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  /* 親要素に対してど真ん中に配置 */
+  width: 25px;
+  /* お肉の幅 */
+  height: 2px;
+  /* お肉の高さ */
+  background-color: #333;
+  transition: inherit;
+}
+
+.p-hamburger__line::before,
+.p-hamburger__line::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: inherit;
+  transition: inherit;
+}
+
+.p-hamburger__line::before {
+  top: -7px;
+}
+
+.p-hamburger__line::after {
+  top: 7px;
+}
+
+.p-drawer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  transform: translateX(100%);
+  transition: transform .3s ease-in-out;
+}
+
+.p-hamburger[aria-expanded="true"] .p-hamburger__line {
+  background-color: transparent;
+}
+
+.is-drawerActive .p-drawer {
+  transform: translateX(0);
+}
+
+.p-hamburger[aria-expanded="true"] .p-hamburger__line::before,
+.p-hamburger[aria-expanded="true"] .p-hamburger__line::after {
+  top: 0;
+  background-color: #333;
+}
+
+.p-hamburger[aria-expanded="true"] .p-hamburger__line::before {
+  transform: rotate(45deg);
+}
+
+.p-hamburger[aria-expanded="true"] .p-hamburger__line::after {
+  transform: rotate(-45deg);
+}
+
+/* ハンバーガーメニュー開封
+------------------------------------------- */
+.hamburger__nav {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.hamburger__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  z-index: 1;
+}
+
+.hamburger__nav.hamburger__list {
+  transform: translate(-50%, -50%);
+}
+
+.hamburger__item {
+  padding: 10px 20px;
+  border: 1px solid #9e9393;
+  border-radius: 15px;
+}
+
+.hamburger__text {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.hamburger__item {
+  font-family: 'Lato';
+  font-size: 2.8rem;
+  font-weight: 400;
+  line-height: 1.21429;
+  letter-spacing: 0.2em;
+  cursor: pointer;
+}
+
+.hamburger__text {
+  font-family: '游ゴシック', 'Yu Gothic', YuGothic;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.71429;
+  letter-spacing: 0.2em;
+}
+
+/* -------------------------------------
+レスポンシブ min-width: 600px; 
+----------------------------------------*/
+@media screen and (min-width: 600px) {
+  .c-button {
+    display: none;
+  }
 }
 
 /* ===============================================*/
@@ -1633,6 +1753,9 @@ SP画面
   .works__item {
     max-width: calc((100% / 3)-2vw);
   }
+  .works__item > a:hover {
+    opacity: .5;
+  }
   .works__item > img {
     object-fit: cover;
   }
@@ -1641,6 +1764,11 @@ SP画面
 /* ===============================================*/
 /*  #contact
 /*=============================================== */
+.contact__inner {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
 .contact__item {
   max-width: 280px;
   text-align: center;

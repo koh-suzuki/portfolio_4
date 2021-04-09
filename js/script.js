@@ -96,3 +96,21 @@ $(function() {
 $(function() {
 	AOS.init()
 });
+
+/* ===============================================*/
+/*  ハンバーガーメニュー
+/*=============================================== */
+$(function() {
+	$('#js-buttonHamburger').click(function () {
+    $('body').toggleClass('is-drawerActive');
+    if ($(this).attr('aria-expanded') == 'false') {
+      $(this).attr('aria-expanded', true);
+			$('.hamburger__nav').fadeIn(800);
+			$("body ,html").css('overflow','hidden');
+    } else {
+			$(this).attr('aria-expanded', false);
+			$('.hamburger__nav').fadeOut(800);
+			$("body, html").css('overflow','auto');
+    }
+  });
+});

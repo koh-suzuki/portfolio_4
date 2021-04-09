@@ -12,5 +12,8 @@
   .btn-top {
     width: 30px;
     margin: 0 auto;
+    &:hover {
+      opacity: .5;
+    }
   }
 }
