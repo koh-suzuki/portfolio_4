@@ -28,7 +28,7 @@
 @include mq-up($breakpoint: md) {
   .open__text {
     position: fixed;
-    left: 55%;
+    left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     width: 280px;
