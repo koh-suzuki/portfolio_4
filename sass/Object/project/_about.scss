@@ -95,9 +95,9 @@
 ----------------------------------------*/
 @include mq-up($breakpoint: lg) {
   .about__icon {
-    max-width: 40%;
+    max-width: 30%;
   }
   .about__inner {
-    max-width: 50%;
+    max-width: 60%;
   }
 }

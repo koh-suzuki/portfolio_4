@@ -4,21 +4,26 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AOSHIRO WORKS</title>
-  <link rel="stylesheet" href="/css/aos.css">
-  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <!-- <title>AOSHIRO WORKS</title> -->
+  <title><?php bloginfo('name'); ?></title>
+  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>
+/css/aos.css">
+  <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/style.css">
+  <?php wp_head(); ?>
+  
 </head>
 <body>
   <!-- オープンアニメーション -->
   <div class="start">
-    <p class="open__text">AOSHIRO WORKS</p>
+    <p class="open__text"><?php bloginfo('name'); ?>
+    </p>
   </div>
   <header class="l-header__wrapper">
     <div class="header__inner">
-      <h1 class="header__logo"><a href="/html/index.html">AOSHIRO WORKS</a></h1>
+      <h1 class="header__logo"><a href="<?php home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
       <ul class="sns__wrapper">
-        <li class="insta__item"><a href="https://www.instagram.com/" target="blanc"><img src="/img/glyph-logo_May2016-min.png" alt="インスタグラムのロゴ"></a></li>
-        <li class="tw__item"><a href="https://twitter.com/kohei39k" target="blanc"><img src="/img/2021 Twitter logo - black-min.png" alt="ツイッターのロゴ"></a></li>
+        <li class="insta__item"><a href="https://www.instagram.com/" target="blanc"><img src="<?php echo get_template_directory_uri(); ?>/img/glyph-logo_May2016-min.png" alt="インスタグラムのロゴ"></a></li>
+        <li class="tw__item"><a href="https://twitter.com/kohei39k" target="blanc"><img src="<?php echo get_template_directory_uri(); ?>/img/2021 Twitter logo - black-min.png" alt="ツイッターのロゴ"></a></li>
       </ul>
       <nav class="header__nav">
         <ul class="header__list">
@@ -58,7 +63,9 @@
           c-22.4,3-38.4,9.2-47.8,18.3c-11.2,10.9-13.6,26.7-16.3,45c-3.1,20.8-6.6,44.4-25.3,62.4c-19.8,19.1-51.6,26.9-100.2,24.6l1.8-39.7    c35.9,1.6,59.7-2.9,70.8-13.6c8.9-8.6,11.1-22.9,13.5-39.6c6.3-42,14.8-99.4,141.4-99.4h41L333,166c-12.6,16-45.4,68.2-31.2,96.2  c9.2,18.3,41.5,25.6,91.2,24.2l1.1,39.8C390.5,326.2,387.1,326.3,383.8,326.3z" />
           </g>
           </svg>
-          <h2 class="concept__title">AOSHIRO WORKS</h2>
+          <h2 class="concept__title">
+            <?php bloginfo('name'); ?>
+          </h2>
         </div>
         
         <!--Waves Container-->
@@ -88,16 +95,21 @@
         </p>
         <section class="about__wrapper">
           <figure class="about__icon">
-            <img src="/img/pf_img.jpeg" alt="あおしろのアイコン画像">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/pf_img.jpeg" alt="あおしろのアイコン画像">
           </figure>
           <section class="about__inner">
-            <dl class="about__list">
+            <?php the_post(); ?>
+            <dl class="about__list">              
               <dt class="about__title">名称：</dt>
-              <dd class="about__text">AOSHIRO WORKS</dd>
+              <dd class="about__text">
+                <?php the_author(); ?>
+              </dd>
               <dt class="about__title">所在地：</dt>
               <dd class="about__text">千葉県内</dd>
               <dt class="about__title">お問い合わせ：</dt>
-              <dd class="about__text">aoshiro.web@gmail.com</dd>
+              <!-- <dd class="about__text">aoshiro.web@gmail.com</dd> -->
+              <dd class="about__text"><?php bloginfo('admin_email'); ?>
+              </dd>
               <dt class="about__title">事業内容：</dt>
               <dd class="about__text">Webサイト制作、LP制作、コーディング</dd>
               <dt class="about__title">スキル：</dt>
@@ -129,7 +141,7 @@
           <section class="service__item ">
             <h3 class="service__title">コーディング</h3>
             <p class="service__sub__title">CODING</p>
-            <p class="service__icon"><img src="/img/icon1.jpeg" alt="コーディング"></p>
+            <p class="service__icon"><img src="<?php echo get_template_directory_uri(); ?>/img/icon1.jpeg" alt="コーディング"></p>
             <p class="service__text">
               デザインの意図を理解し、動きや効果を適切に使用することでWebサイトの仕上がりは大きく変わります。スマートフォンサイト、ワードプレスを使用した更新性の高いサイト、Javascriptを使用した動きのあるサイトなど、様々なサイトのコーディングを行っております。
             </p>
@@ -137,7 +149,7 @@
           <section class="service__item ">
             <h3 class="service__title">LP制作</h3>
             <p class="service__sub__title">LP PRODUCTION</p>
-            <p class="service__icon"><img src="/img/icon2.jpeg" alt="LP制作"></p>
+            <p class="service__icon"><img src="<?php echo get_template_directory_uri(); ?>/img/icon2.jpeg" alt="LP制作"></p>
             <p class="service__text">
               ヒアリングに基づいたプランに沿って、デザインを作成いたします。人の使うものであることを常に意識して、使う人が迷わない、目的を達成できるデザインを心がけています。デザインからコーディングまでお客様のご要望に添って適切に制作いたします。
             </p>
@@ -145,7 +157,7 @@
           <section class="service__item last">
             <h3 class="service__title">Webサイト制作</h3>
             <p class="service__sub__title">WEBSITE PRODUCTION</p>
-            <p class="service__icon"><img src="/img/icon3.jpeg" alt="Webサイト制作"></p>
+            <p class="service__icon"><img src="<?php echo get_template_directory_uri(); ?>/img/icon3.jpeg" alt="Webサイト制作"></p>
             <p class="service__text">
               お客様の「想い」がより多くの方に伝わるよう心がけ制作いたします。現状の問題点を洗い出し、効果的なプランを作成。制作ではデザインに入る前の事前の準備が特に重要になります。何が必要で何が必要でないのかを判断し、費用対効果の高いWebサイト制作を心がけています。
             </p>
@@ -158,47 +170,47 @@
       <section class="l-section__inner works__list">
         <figure class="works__item" data-aos="fade-in" data-aos-duration	="1000">
           <a href="#">
-            <img src="/img/grid-sample-min.jpeg" alt="制作物の画像">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/grid-sample-min.jpeg" alt="制作物の画像">
           </a>
         </figure>
         <figure class="works__item" data-aos="fade-in" data-aos-duration	="1000" data-aos-delay="200">
           <a href="#">
-            <img src="/img/grid-sample-min.jpeg" alt="制作物の画像">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/grid-sample-min.jpeg" alt="制作物の画像">
           </a>
         </figure>
         <figure class="works__item" data-aos="fade-in" data-aos-duration	="1000" data-aos-delay="400">
           <a href="#">
-            <img src="/img/grid-sample-min.jpeg" alt="制作物の画像">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/grid-sample-min.jpeg" alt="制作物の画像">
           </a>
         </figure>
         <figure class="works__item" data-aos="fade-in" data-aos-duration	="1000">
           <a href="#">
-            <img src="/img/grid-sample-min.jpeg" alt="制作物の画像">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/grid-sample-min.jpeg" alt="制作物の画像">
           </a>
         </figure>
         <figure class="works__item" data-aos="fade-in" data-aos-duration	="1000" data-aos-delay="200">
           <a href="#">
-            <img src="/img/grid-sample-min.jpeg" alt="制作物の画像">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/grid-sample-min.jpeg" alt="制作物の画像">
           </a>
         </figure>
         <figure class="works__item" data-aos="fade-in" data-aos-duration	="1000" data-aos-delay="400">
           <a href="#">
-            <img src="/img/grid-sample-min.jpeg" alt="制作物の画像">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/grid-sample-min.jpeg" alt="制作物の画像">
           </a>
         </figure>
         <figure class="works__item" data-aos="fade-in" data-aos-duration	="1000">
           <a href="#">
-            <img src="/img/grid-sample-min.jpeg" alt="制作物の画像">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/grid-sample-min.jpeg" alt="制作物の画像">
           </a>
         </figure>
         <figure class="works__item" data-aos="fade-in" data-aos-duration	="1000" data-aos-delay="200">
           <a href="#">
-            <img src="/img/grid-sample-min.jpeg" alt="制作物の画像">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/grid-sample-min.jpeg" alt="制作物の画像">
           </a>
         </figure>
         <figure class="works__item" data-aos="fade-in" data-aos-duration	="1000" data-aos-delay="400">
           <a href="#">
-            <img src="/img/grid-sample-min.jpeg" alt="制作物の画像">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/grid-sample-min.jpeg" alt="制作物の画像">
           </a>
         </figure>
       </section>
@@ -206,32 +218,32 @@
         <ul class="slider">
           <li>
             <a href="#" target="_blank" rel="noopener noreferrer">
-              <img src="/img/grid-sample-min.jpeg" alt="制作物の画像">
+              <img src="<?php echo get_template_directory_uri(); ?>/img/grid-sample-min.jpeg" alt="制作物の画像">
             </a>
           </li>
           <li>
             <a href="#" target="_blank" rel="noopener noreferrer">
-              <img src="/img/grid-sample-min.jpeg" alt="制作物の画像">
+              <img src="<?php echo get_template_directory_uri(); ?>/img/grid-sample-min.jpeg" alt="制作物の画像">
             </a>
           </li>
           <li>
             <a href="#" target="_blank" rel="noopener noreferrer">
-              <img src="/img/grid-sample-min.jpeg" alt="制作物の画像">
+              <img src="<?php echo get_template_directory_uri(); ?>/img/grid-sample-min.jpeg" alt="制作物の画像">
             </a>
           </li>
           <li>
             <a href="#" target="_blank" rel="noopener noreferrer">
-              <img src="/img/grid-sample-min.jpeg" alt="制作物の画像">
+              <img src="<?php echo get_template_directory_uri(); ?>/img/grid-sample-min.jpeg" alt="制作物の画像">
             </a>
           </li>
           <li>
             <a href="#" target="_blank" rel="noopener noreferrer">
-              <img src="/img/grid-sample-min.jpeg" alt="制作物の画像">
+              <img src="<?php echo get_template_directory_uri(); ?>/img/grid-sample-min.jpeg" alt="制作物の画像">
             </a>
           </li>
           <li>
             <a href="#" target="_blank" rel="noopener noreferrer">
-              <img src="/img/grid-sample-min.jpeg" alt="制作物の画像">
+              <img src="<?php echo get_template_directory_uri(); ?>/img/grid-sample-min.jpeg" alt="制作物の画像">
             </a>
           </li>
         </ul>
@@ -245,7 +257,7 @@
             <a href="/html/contact.html" target="blanc">
               <h3 class="contact__title">Form</h3>
               <figure class="contact__img">
-                <img src="/img/form_icon-min.jpeg" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/form_icon-min.jpeg" alt="">
               </figure>
               <p class="contact__sub__title">お問い合わせフォーム</p>
             </a>
@@ -254,7 +266,7 @@
             <a href="https://twitter.com/kohei39k" target="blanc">
               <h3 class="contact__title">Twitter</h3>
               <figure class="contact__img">
-                <img src="/img/2021 Twitter logo - black-min.png" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/2021 Twitter logo - black-min.png" alt="">
               </figure>
               <p class="contact__sub__title">ツイッターでお問い合わせ</p>
             </a>
@@ -266,7 +278,7 @@
     <section class="to__top">
       <p class="btn btn-top">
         <a href="#concept">
-          <img src="/img/icon_totop.gif" alt="トップへ戻るボタン">
+          <img src="<?php echo get_template_directory_uri(); ?>/img/icon_totop.gif" alt="トップへ戻るボタン">
         </a>
       </p>
     </section>
@@ -307,9 +319,11 @@
     </section>
   </footer>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="/js/script.js"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/js/script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
-  <script type="text/javascript" src="/js/slick.min.js"></script>
-  <script src="/js/aos.js"></script>
+  <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/slick.min.js"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/js/aos.js"></script>
+  <?php wp_footer(); ?>
+  
 </body>
 </html>
