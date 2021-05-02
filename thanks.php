@@ -17,7 +17,7 @@
         <p class="thanks__text">この度は AOSHIRO WORKS へお問い合わせいただき <br> 誠にありがとうございます。 <br> 1営業日以内を目安にご連絡致します。</p>
       </section>
       <p class="link__home">
-        <a href="/html/index.html">HOME</a>
+        <a href="<?php echo home_url(); ?>">HOME</a>
       </p>
     </section>
   </main>
