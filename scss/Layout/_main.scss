@@ -62,6 +62,13 @@
   margin-top: 20px;
   font-size: 1.4rem;
 }
+.btn__contact__short {
+  width: 20%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 20px;
+  font-size: 1.4rem;
+}
 .btn__group {
   text-align: center;
 }
@@ -78,6 +85,9 @@
 /* -------------------------------------
 レスポンシブ min-width: 600px; 
 ----------------------------------------*/
+
+/* form
+/*----------------------- */
 @include mq-up($breakpoint: md) {
   .contact__text__left {
     text-align: left;
@@ -86,9 +96,6 @@
     line-height: 1.8;
     margin-bottom: 40px;
   }
-
-  /* form
-  /*----------------------- */
   .form__wrapper {
     padding-bottom: 130px;
   }
@@ -111,8 +118,22 @@
     margin-top: 20px;
     font-size: 1.4rem;
   }
+  .btn__contact__short {
+    width: 10%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 20px;
+    font-size: 1.4rem;
+  }
   .btn__group {
     text-align: left;
+  }
+  .form-group__inner {
+    display: flex;
+    align-items: flex-end;
+  }
+  .error {
+    margin-left: 0.5rem;
   }
 }
 
