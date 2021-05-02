@@ -65,6 +65,15 @@
 .btn__group {
   text-align: center;
 }
+.form-group__inner {
+  display: flex;
+  align-items: flex-end
+}
+.error {
+  margin-left: .5rem;
+}
+
+
 
 /* -------------------------------------
 レスポンシブ min-width: 600px; 

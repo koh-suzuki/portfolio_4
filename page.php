@@ -13,7 +13,9 @@
           <br>
           下記フォームよりわかる範囲でご記入ください。必須の項目は必ずご記入お願いします。
         </p>
-        <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfREu12b0ooUJad-kSRImcWtWtB68837LcPK2Yeat2VIy-Btw/formResponse" class="form__wrapper needs-validation" method="post" target="hidden_iframe" onsubmit="submitted=true;" novalidate>
+        <?php  the_content(); ?>
+        
+        <!-- <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfREu12b0ooUJad-kSRImcWtWtB68837LcPK2Yeat2VIy-Btw/formResponse" class="form__wrapper needs-validation" method="post" target="hidden_iframe" onsubmit="submitted=true;" novalidate>
           <div class="form-group">
             <label for="company" class="form-label">貴社名</label>
             <div class="input-group">
@@ -66,12 +68,12 @@
           <div class="btn__group">
             <button class="btn btn-primary btn__contact" type="submit">内容を送信</button>
           </div>
-        </form>
+        </form> -->
         <!-- フォームレンダリング -->
-        <script type="text/javascript">
+        <!-- <script type="text/javascript">
           var submitted = false;
         </script>
-        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted){window.location='/html/about.html';}"></iframe>
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted){window.location='/html/about.html';}"></iframe> -->
       </section>
     </section>
   </main>

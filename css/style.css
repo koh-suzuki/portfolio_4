@@ -1,17 +1,16 @@
-@charset "UTF-8";
 /* ===============================================*/
 /* # Foundation
-/*=============================================== */
+ /*=============================================== */
 /*!
  * ress.css • v1.2.2
  * MIT License
  * github.com/filipelinhares/ress
  */
 /* # =================================================================
-   # Global selectors
-   # ================================================================= */
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+JP&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,100&family=Noto+Sans+JP&family=Noto+Sans:wght@400;700&display=swap");
+ # Global selectors
+ # ================================================================= */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+JP&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,100&family=Noto+Sans+JP&family=Noto+Sans:wght@400;700&display=swap');
 html {
   box-sizing: border-box;
   overflow-y: scroll;
@@ -19,246 +18,169 @@ html {
   -webkit-text-size-adjust: 100%;
   /* iOS 8+ */
 }
-
-*,
-::before,
-::after {
+*, ::before, ::after {
   background-repeat: no-repeat;
   /* Set `background-repeat: no-repeat` to all elements */
   box-sizing: inherit;
 }
-
-::before,
-::after {
+::before, ::after {
   text-decoration: inherit;
   /* Inherit text-decoration and vertical align to ::before and ::after pseudo elements */
   vertical-align: inherit;
 }
-
 /* Remove margin, padding of all elements and set background-no-repeat as default */
 * {
   padding: 0;
   /* Reset `padding` and `margin` of all elements */
   margin: 0;
 }
-
 /* # =================================================================
-   # General elements
-   # ================================================================= */
+ # General elements
+ # ================================================================= */
 /* Add the correct display in iOS 4-7.*/
 audio:not([controls]) {
   display: none;
   height: 0;
 }
-
 hr {
   overflow: visible;
   /* Show the overflow in Edge and IE */
 }
-
 /*
-* Correct `block` display not defined for any HTML5 element in IE 8/9
-* Correct `block` display not defined for `details` or `summary` in IE 10/11
-* and Firefox
-* Correct `block` display not defined for `main` in IE 11
-*/
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-main,
-menu,
-nav,
-section,
-summary {
+ * Correct `block` display not defined for any HTML5 element in IE 8/9
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox
+ * Correct `block` display not defined for `main` in IE 11
+ */
+article, aside, details, figcaption, figure, footer, header, main, menu, nav, section, summary {
   display: block;
 }
-
 summary {
   display: list-item;
   /* Add the correct display in all browsers */
 }
-
 small {
   font-size: 80%;
   /* Set font-size to 80% in `small` elements */
 }
-
-[hidden],
-template {
+[hidden], template {
   display: none;
   /* Add the correct display in IE */
 }
-
 abbr[title] {
   border-bottom: 1px dotted;
   /* Add a bordered underline effect in all browsers */
   text-decoration: none;
   /* Remove text decoration in Firefox 40+ */
 }
-
 a {
   background-color: transparent;
   /* Remove the gray background on active links in IE 10 */
   -webkit-text-decoration-skip: objects;
   /* Remove gaps in links underline in iOS 8+ and Safari 8+ */
 }
-
-a:active,
-a:hover {
+a:active, a:hover {
   outline-width: 0;
   /* Remove the outline when hovering in all browsers */
 }
-
-code,
-kbd,
-pre,
-samp {
+code, kbd, pre, samp {
   font-family: monospace, monospace;
   /* Specify the font family of code elements */
 }
-
-b,
-strong {
+b, strong {
   font-weight: bolder;
   /* Correct style set to `bold` in Edge 12+, Safari 6.2+, and Chrome 18+ */
 }
-
 dfn {
   font-style: italic;
   /* Address styling not present in Safari and Chrome */
 }
-
 /* Address styling not present in IE 8/9 */
 mark {
   background-color: #ff0;
   color: #000;
 }
-
 /* https://gist.github.com/unruthless/413930 */
-sub,
-sup {
+sub, sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
   vertical-align: baseline;
 }
-
 sub {
   bottom: -0.25em;
 }
-
 sup {
   top: -0.5em;
 }
-
 /* # =================================================================
-   # Forms
-   # ================================================================= */
+ # Forms
+ # ================================================================= */
 input {
   border-radius: 0;
 }
-
 /* Apply cursor pointer to button elements */
-button,
-[type="button"],
-[type="reset"],
-[type="submit"],
-[role="button"] {
+button, [type="button"], [type="reset"], [type="submit"], [role="button"] {
   cursor: pointer;
 }
-
 /* Replace pointer cursor in disabled elements */
 [disabled] {
   cursor: default;
 }
-
 [type="number"] {
   width: auto;
   /* Firefox 36+ */
 }
-
 [type="search"] {
   -webkit-appearance: textfield;
   /* Safari 8+ */
 }
-
-[type="search"]::-webkit-search-cancel-button,
-[type="search"]::-webkit-search-decoration {
+[type="search"]::-webkit-search-cancel-button, [type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
   /* Safari 8 */
 }
-
 textarea {
   overflow: auto;
   /* Internet Explorer 11+ */
   resize: vertical;
   /* Specify textarea resizability */
 }
-
-button,
-input,
-optgroup,
-select,
-textarea {
+button, input, optgroup, select, textarea {
   font: inherit;
   /* Specify font inheritance of form elements */
 }
-
 optgroup {
   font-weight: bold;
   /* Restore the font weight unset by the previous rule. */
 }
-
 button {
   overflow: visible;
   /* Address `overflow` set to `hidden` in IE 8/9/10/11 */
 }
-
 /* Remove inner padding and border in Firefox 4+ */
-button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
+button::-moz-focus-inner, [type="button"]::-moz-focus-inner, [type="reset"]::-moz-focus-inner, [type="submit"]::-moz-focus-inner {
   border-style: 0;
   padding: 0;
 }
-
 /* Replace focus style removed in the border reset above */
-button:-moz-focusring,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
+button:-moz-focusring, [type="button"]::-moz-focus-inner, [type="reset"]::-moz-focus-inner, [type="submit"]::-moz-focus-inner {
   outline: 1px dotted ButtonText;
 }
-
-button,
-html [type="button"],
-[type="reset"],
-[type="submit"] {
+button, html [type="button"], [type="reset"], [type="submit"] {
+  /* Prevent a WebKit bug where (2) destroys native `audio` and `video`controls in Android 4 */
   -webkit-appearance: button;
   /* Correct the inability to style clickable types in iOS */
 }
-
-button,
-select {
+button, select {
   text-transform: none;
   /* Firefox 40+, Internet Explorer 11- */
 }
-
 /* Remove the default button styling in all browsers */
-button,
-input,
-select,
-textarea {
+button, input, select, textarea {
   background-color: transparent;
   border-style: none;
   color: inherit;
 }
-
 /* Style select like a standard input */
 select {
   -moz-appearance: none;
@@ -266,17 +188,14 @@ select {
   -webkit-appearance: none;
   /* Chrome 41+ */
 }
-
 select::-ms-expand {
   display: none;
   /* Internet Explorer 11+ */
 }
-
 select::-ms-value {
   color: currentColor;
   /* Internet Explorer 11+ */
 }
-
 legend {
   border: 0;
   /* Correct `color` not being inherited in IE 8/9/10/11 */
@@ -289,50 +208,40 @@ legend {
   white-space: normal;
   /* Correct the text wrapping in Edge and IE */
 }
-
 ::-webkit-file-upload-button {
   -webkit-appearance: button;
   /* Correct the inability to style clickable types in iOS and Safari */
   font: inherit;
   /* Change font properties to `inherit` in Chrome and Safari */
 }
-
 [type="search"] {
   -webkit-appearance: textfield;
   /* Correct the odd appearance in Chrome and Safari */
   outline-offset: -2px;
   /* Correct the outline style in Safari */
 }
-
 /* # =================================================================
-   # Specify media element style
-   # ================================================================= */
+ # Specify media element style
+ # ================================================================= */
 img {
   border-style: none;
   /* Remove border when inside `a` element in IE 8/9/10 */
 }
-
 /* Add the correct vertical alignment in Chrome, Firefox, and Opera */
 progress {
   vertical-align: baseline;
 }
-
 svg:not(:root) {
   overflow: hidden;
   /* Internet Explorer 11- */
 }
-
-audio,
-canvas,
-progress,
-video {
+audio, canvas, progress, video {
   display: inline-block;
   /* Internet Explorer 11+, Windows Phone 8.1+ */
 }
-
 /* # =================================================================
-   # Accessibility
-   # ================================================================= */
+ # Accessibility
+ # ================================================================= */
 /* Hide content from screens but not screenreaders */
 @media screen {
   [hidden~="screen"] {
@@ -343,51 +252,50 @@ video {
     clip: rect(0 0 0 0) !important;
   }
 }
-
 /* Specify the progress cursor of updating elements */
 [aria-busy="true"] {
   cursor: progress;
 }
-
 /* Specify the pointer cursor of trigger elements */
 [aria-controls] {
   cursor: pointer;
 }
-
 /* Specify the unstyled cursor of disabled, not-editable, or otherwise inoperable elements */
 [aria-disabled] {
   cursor: default;
 }
-
 /* # =================================================================
-   # Selection
-   # ================================================================= */
+ # Selection
+ # ================================================================= */
 /* Specify text selection background color and omit drop shadow */
-
+::-moz-selection {
+  background-color: #b3d4fc;
+  /* Required when declaring ::selection */
+  color: #000;
+  text-shadow: none;
+}
 ::selection {
   background-color: #b3d4fc;
   /* Required when declaring ::selection */
   color: #000;
   text-shadow: none;
 }
-
 /* ============================================== */
 /* Font
-/*=============================================== */
+ /*=============================================== */
 /* base
-/*----------------------- */
+ /*----------------------- */
 html {
   font-size: 62.5%;
 }
-
 body {
   font-size: 1rem;
-  font-family: 'Noto Sans', sans-serif, 'Noto Sans JP', sans-serif,'游ゴシック', 'Yu Gothic', YuGothic;
-  color: #333333;
+  font-family: 'Noto Sans', sans-serif, 'Noto Sans JP', sans-serif, '游ゴシック', 'Yu Gothic', YuGothic;
+  color: #333;
+  background-color: #fff;
 }
-
 /* main
-/*----------------------- */
+ /*----------------------- */
 .section__title {
   font-family: 'Lato', sans-serif;
   font-size: 4rem;
@@ -395,60 +303,51 @@ body {
   line-height: 1;
   letter-spacing: 0.1em;
 }
-
 .section__text {
   font-size: 1.4rem;
   font-weight: 400;
   line-height: 1;
   letter-spacing: 0.1em;
 }
-
 p {
-  color: #333333;
+  color: #333;
 }
-
 a {
   text-decoration: none;
-  color: #333333;
+  color: #333;
 }
-
 img {
   vertical-align: top;
   width: 100%;
 }
-
 ul {
   list-style: none;
 }
-
 .flexbox__start {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
   justify-content: space-between;
 }
-
 .flexbox__center {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
   justify-content: space-around;
 }
-
 /* ===============================================*/
 /* # Layout
-/*=============================================== */
+ /*=============================================== */
 /* # フォント
------------------------ */
+ ----------------------- */
 /* ------------------------------
-SP画面
-------------------------------- */
+ SP画面
+ ------------------------------- */
 .l-header__wrapper {
   height: 140px;
-  background-color: #ffffff;
+  background-color: #fff;
   padding: 10px 2vw;
 }
-
 .header__inner {
   position: relative;
   display: flex;
@@ -458,7 +357,6 @@ SP画面
   margin: 0 auto;
   height: 100%;
 }
-
 /*** SNSアイコン ***/
 .sns__wrapper {
   position: absolute;
@@ -468,25 +366,19 @@ SP画面
   display: flex;
   align-items: center;
 }
-
-.insta__item,
-.tw__item {
+.insta__item, .tw__item {
   width: 30px;
   height: auto;
   margin: 0 15px;
 }
-
-.insta__item > a,
-.tw__item > a {
+.insta__item > a, .tw__item > a {
   display: block;
 }
-
 .header__nav {
   display: none;
 }
-
 /* スマホ画面 フォント
------------------------------------------- */
+ ------------------------------------------ */
 .header__logo {
   font-family: 'Noto Sans', sans-serif;
   font-size: 2.4rem;
@@ -494,17 +386,16 @@ SP画面
   line-height: 1.25;
   letter-spacing: 0.05em;
 }
-
 /* --------------------------------------
-レスポンシブ min-width: 600px; 
-----------------------------------------*/
+ レスポンシブ min-width: 600px; 
+ ----------------------------------------*/
 @media screen and (min-width: 600px) {
   /* ------------------------------
-タブレット画面
-------------------------------- */
+   タブレット画面
+   ------------------------------- */
   .l-header__wrapper {
     height: 270px;
-    background-color: #ffffff;
+    background-color: #fff;
     padding: 10px 2vw;
   }
   .header__inner {
@@ -525,14 +416,12 @@ SP画面
     display: flex;
     align-items: center;
   }
-  .insta__item,
-  .tw__item {
+  .insta__item, .tw__item {
     width: 22px;
     height: auto;
     margin: 0 10px;
   }
-  .insta__item > a,
-  .tw__item > a {
+  .insta__item > a, .tw__item > a {
     display: block;
   }
   .header__nav {
@@ -553,14 +442,14 @@ SP画面
     letter-spacing: 0.005em;
   }
   .header__item > a {
-    color: #333333;
+    color: #333;
     padding: 5px;
   }
   .header__item > a:hover {
-    opacity: .5;
+    opacity: 0.5;
     cursor: pointer;
+    /* タブレット画面用フォント */
   }
-  /* タブレット画面用フォント */
   .header__logo {
     font-family: 'Noto Sans', sans-serif;
     font-size: 2.4rem;
@@ -569,24 +458,20 @@ SP画面
     letter-spacing: 0.2em;
   }
 }
-
 .l-section__wrapper {
   padding-bottom: 30px;
 }
-
 .l-section__inner {
   padding: 0 5%;
   height: 100%;
 }
-
 .section__title {
   text-align: center;
   margin-bottom: 25px;
 }
-
 /* --------------------------------------
-レスポンシブ min-width: 600px; 
-----------------------------------------*/
+ レスポンシブ min-width: 600px; 
+ ----------------------------------------*/
 @media screen and (min-width: 600px) {
   .l-section__wrapper {
     padding-bottom: 100px;
@@ -600,10 +485,9 @@ SP画面
     margin-bottom: 60px;
   }
 }
-
 /* --------------------------------------
-レスポンシブ min-width: 1025px; 
-----------------------------------------*/
+ レスポンシブ min-width: 1025px; 
+ ----------------------------------------*/
 @media screen and (min-width: 1025px) {
   .l-section__wrapper {
     padding-bottom: 130px;
@@ -614,19 +498,16 @@ SP画面
     height: 100%;
   }
 }
-
 .contact__form__text {
   line-height: 1.4;
   margin-bottom: 40px;
 }
-
 .form-label {
   font-size: 1.4rem;
   font-weight: 300;
-  line-height: 1.28571;
+  line-height: 1.2857142857;
   letter-spacing: 0.1em;
 }
-
 .btn__contact {
   width: 50%;
   padding-top: 10px;
@@ -634,14 +515,19 @@ SP画面
   margin-top: 20px;
   font-size: 1.4rem;
 }
-
 .btn__group {
   text-align: center;
 }
-
+.form-group__inner {
+  display: flex;
+  align-items: flex-end;
+}
+.error {
+  margin-left: 0.5rem;
+}
 /* -------------------------------------
-レスポンシブ min-width: 600px; 
-----------------------------------------*/
+ レスポンシブ min-width: 600px; 
+ ----------------------------------------*/
 @media screen and (min-width: 600px) {
   .contact__text__left {
     text-align: left;
@@ -649,9 +535,9 @@ SP画面
   .contact__form__text {
     line-height: 1.8;
     margin-bottom: 40px;
+    /* form
+     /*----------------------- */
   }
-  /* form
-  /*----------------------- */
   .form__wrapper {
     padding-bottom: 130px;
   }
@@ -664,7 +550,7 @@ SP画面
   .form-label {
     font-size: 1.4rem;
     font-weight: 300;
-    line-height: 1.28571;
+    line-height: 1.2857142857;
     letter-spacing: 0.1em;
   }
   .contact__form {
@@ -681,40 +567,32 @@ SP画面
     text-align: left;
   }
 }
-
 .l-thanks {
   position: absolute;
   top: 30%;
   left: 50%;
   transform: translateX(-50%);
 }
-
 .thanks__wrapper {
   margin-bottom: 45px;
   text-align: center;
 }
-
 .link__home {
   text-align: center;
 }
-
 .link__home > a {
   color: #858585;
   border-bottom: 1px solid #858585;
 }
-
 .link__home > a:hover {
-  opacity: .5;
+  opacity: 0.5;
 }
-
 .thanks__main__title {
   margin-bottom: 30px;
 }
-
 .thanks__sub__title {
   margin-bottom: 20px;
 }
-
 .thanks__main__title {
   font-family: 'Lato', sans-serif;
   font-size: 3.2rem;
@@ -722,24 +600,21 @@ SP画面
   line-height: 1;
   letter-spacing: 0.1em;
 }
-
 .thanks__sub__title {
   font-size: 1.3rem;
   font-weight: 400;
-  line-height: 1.69231;
+  line-height: 1.6923076923;
   letter-spacing: 0.1em;
 }
-
 .thanks__text {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.8;
   letter-spacing: 0.15em;
 }
-
 /* --------------------------------------
-レスポンシブ min-width: 600px; 
-----------------------------------------*/
+ レスポンシブ min-width: 600px; 
+ ----------------------------------------*/
 @media screen and (min-width: 600px) {
   .thanks__wrapper {
     margin-bottom: 45px;
@@ -754,26 +629,25 @@ SP画面
   .thanks__sub__title {
     font-size: 1.8rem;
     font-weight: 400;
-    line-height: 1.66667;
+    line-height: 1.6666666667;
     letter-spacing: 0.15em;
   }
   .thanks__text {
     font-size: 1.4rem;
     font-weight: 400;
-    line-height: 1.78571;
+    line-height: 1.7857142857;
     letter-spacing: 0.1em;
   }
   .link__home {
     font-size: 1.4rem;
     font-weight: 400;
-    line-height: 1.78571;
+    line-height: 1.7857142857;
     letter-spacing: 0.1em;
   }
 }
-
 /* --------------------------------------
-レスポンシブ max-width: 1025px; 
-----------------------------------------*/
+ レスポンシブ max-width: 1025px; 
+ ----------------------------------------*/
 @media screen and (min-width: 1025px) {
   .thanks__wrapper {
     margin-bottom: 70px;
@@ -794,7 +668,7 @@ SP画面
   .thanks__sub__title {
     font-size: 2.4rem;
     font-weight: 400;
-    line-height: 1.45833;
+    line-height: 1.4583333333;
     letter-spacing: 0.15em;
   }
   .thanks__text {
@@ -810,72 +684,58 @@ SP画面
     letter-spacing: 0.15em;
   }
 }
-
 .footer {
   padding: 70px 0 30px;
 }
-
 .footer__nav {
   display: none;
 }
-
 .footer__item {
   margin-right: 2vw;
 }
-
 .footer__item > a:hover {
-  opacity: .5;
+  opacity: 0.5;
 }
-
 .copyright {
   margin: 30px auto 0;
 }
-
 .footer__list__tb {
   border-collapse: collapse;
   width: 100%;
 }
-
 .footer__item__tb {
   text-align: center;
   padding: 10px;
   width: 50%;
   border: solid 1px #ccc;
 }
-
 .footer__item__tb > a {
   display: block;
 }
-
 .footer__item__tb > a:hover {
-  opacity: .5;
+  opacity: 0.5;
 }
-
 .footer__flexbox {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
 }
-
-.footer__item,
-.footer__item__tb {
+.footer__item, .footer__item__tb {
   font-size: 1.8rem;
   font-weight: 400;
-  line-height: 1.33333;
+  line-height: 1.3333333333;
   letter-spacing: 0.15em;
 }
-
 .copyright > small {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1;
   letter-spacing: 0.15em;
 }
-
 /* -------------------------------------
-レスポンシブ min-width: 600px; 
-----------------------------------------*/
+ レスポンシブ min-width: 600px; 
+ ----------------------------------------*/
 @media screen and (min-width: 600px) {
   .footer {
     padding: 0 0 30px;
@@ -889,7 +749,7 @@ SP画面
     margin-right: 2vw;
   }
   .footer__item > a:hover {
-    opacity: .5;
+    opacity: 0.5;
   }
   .copyright {
     margin: 0;
@@ -907,7 +767,7 @@ SP画面
   .footer__item {
     font-size: 1.4rem;
     font-weight: 400;
-    line-height: 1.42857;
+    line-height: 1.4285714286;
     letter-spacing: 0.15em;
   }
   .copyright > small {
@@ -917,18 +777,16 @@ SP画面
     letter-spacing: 0.15em;
   }
 }
-
 /* ===============================================*/
 /* # Object
-/*=============================================== */
+ /*=============================================== */
 .btn-top {
   width: 30px;
   margin: 0 auto;
 }
-
 /* -------------------------------------
-レスポンシブ min-width: 600px; 
-----------------------------------------*/
+ レスポンシブ min-width: 600px; 
+ ----------------------------------------*/
 @media screen and (min-width: 600px) {
   .to__top {
     padding-bottom: 30px;
@@ -938,15 +796,13 @@ SP画面
     margin: 0 auto;
   }
   .btn-top:hover {
-    opacity: .5;
+    opacity: 0.5;
   }
 }
-
 /* Slider */
 .slick-loading .slick-list {
   background: #fff url("./ajax-loader.gif") center center no-repeat;
 }
-
 /* Icons */
 @font-face {
   font-family: "slick";
@@ -955,10 +811,8 @@ SP画面
   font-weight: normal;
   font-style: normal;
 }
-
 /* Arrows */
-.slick-prev,
-.slick-next {
+.slick-prev, .slick-next {
   position: absolute;
   display: block;
   height: 20px;
@@ -969,33 +823,25 @@ SP画面
   background: transparent;
   color: transparent;
   top: 50%;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
   transform: translate(0, -50%);
   padding: 0;
   border: none;
   outline: none;
 }
-
-.slick-prev:hover, .slick-prev:focus,
-.slick-next:hover,
-.slick-next:focus {
+.slick-prev:hover, .slick-next:hover, .slick-prev:focus, .slick-next:focus {
   outline: none;
   background: transparent;
   color: transparent;
 }
-
-.slick-prev:hover:before, .slick-prev:focus:before,
-.slick-next:hover:before,
-.slick-next:focus:before {
+.slick-prev:hover:before, .slick-next:hover:before, .slick-prev:focus:before, .slick-next:focus:before {
   opacity: 1;
 }
-
-.slick-prev.slick-disabled:before,
-.slick-next.slick-disabled:before {
+.slick-prev.slick-disabled:before, .slick-next.slick-disabled:before {
   opacity: 0.25;
 }
-
-.slick-prev:before,
-.slick-next:before {
+.slick-prev:before, .slick-next:before {
   font-family: "slick";
   font-size: 20px;
   line-height: 1;
@@ -1004,46 +850,36 @@ SP画面
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 .slick-prev {
   left: -25px;
 }
-
 [dir="rtl"] .slick-prev {
   left: auto;
   right: -25px;
 }
-
 .slick-prev:before {
-  content: "←";
+  content: "\2190";
 }
-
 [dir="rtl"] .slick-prev:before {
-  content: "→";
+  content: "\2192";
 }
-
 .slick-next {
   right: -25px;
 }
-
 [dir="rtl"] .slick-next {
   left: -25px;
   right: auto;
 }
-
 .slick-next:before {
-  content: "→";
+  content: "\2192";
 }
-
 [dir="rtl"] .slick-next:before {
-  content: "←";
+  content: "\2190";
 }
-
 /* Dots */
 .slick-dotted.slick-slider {
   margin-bottom: 30px;
 }
-
 .slick-dots {
   position: absolute;
   bottom: -25px;
@@ -1054,7 +890,6 @@ SP画面
   margin: 0;
   width: 100%;
 }
-
 .slick-dots li {
   position: relative;
   display: inline-block;
@@ -1064,7 +899,6 @@ SP画面
   padding: 0;
   cursor: pointer;
 }
-
 .slick-dots li button {
   border: 0;
   background: transparent;
@@ -1078,20 +912,17 @@ SP画面
   padding: 5px;
   cursor: pointer;
 }
-
 .slick-dots li button:hover, .slick-dots li button:focus {
   outline: none;
 }
-
 .slick-dots li button:hover:before, .slick-dots li button:focus:before {
   opacity: 1;
 }
-
 .slick-dots li button:before {
   position: absolute;
   top: 0;
   left: 0;
-  content: "•";
+  content: "\2022";
   width: 20px;
   height: 20px;
   font-family: "slick";
@@ -1103,23 +934,25 @@ SP画面
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 .slick-dots li.slick-active button:before {
   color: black;
   opacity: 0.75;
 }
-
 /* Slider */
 .slick-slider {
   position: relative;
   display: block;
   box-sizing: border-box;
   -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
+  -ms-touch-action: pan-y;
   touch-action: pan-y;
   -webkit-tap-highlight-color: transparent;
 }
-
 .slick-list {
   position: relative;
   overflow: hidden;
@@ -1127,21 +960,20 @@ SP画面
   margin: 0;
   padding: 0;
 }
-
 .slick-list:focus {
   outline: none;
 }
-
 .slick-list.dragging {
   cursor: pointer;
   cursor: hand;
 }
-
-.slick-slider .slick-track,
-.slick-slider .slick-list {
+.slick-slider .slick-track, .slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
-
 .slick-track {
   position: relative;
   left: 0;
@@ -1150,61 +982,48 @@ SP画面
   margin-left: auto;
   margin-right: auto;
 }
-
 .slick-track:before, .slick-track:after {
   content: "";
   display: table;
 }
-
 .slick-track:after {
   clear: both;
 }
-
 .slick-loading .slick-track {
   visibility: hidden;
 }
-
 .slick-slide {
   float: left;
   height: 100%;
   min-height: 1px;
   display: none;
 }
-
 [dir="rtl"] .slick-slide {
   float: right;
 }
-
 .slick-slide img {
   display: block;
 }
-
 .slick-slide.slick-loading img {
   display: none;
 }
-
 .slick-slide.dragging img {
   pointer-events: none;
 }
-
 .slick-initialized .slick-slide {
   display: block;
 }
-
 .slick-loading .slick-slide {
   visibility: hidden;
 }
-
 .slick-vertical .slick-slide {
   display: block;
   height: auto;
   border: 1px solid transparent;
 }
-
 .slick-arrow.slick-hidden {
   display: none;
 }
-
 .u-visuallyHidden {
   position: absolute;
   white-space: nowrap;
@@ -1216,17 +1035,17 @@ SP画面
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
 }
-
 .c-button {
   position: relative;
   display: inline-block;
   text-decoration: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
   border: none;
   background-color: transparent;
   cursor: pointer;
 }
-
 .p-hamburger {
   position: absolute;
   top: 0;
@@ -1236,15 +1055,13 @@ SP画面
   border-radius: 50%;
   box-shadow: 0 0 2rem transparent;
   outline: none;
-  transition: all .3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   z-index: 2;
 }
-
-.p-hamburger:hover,
-.p-hamburger:focus {
+.p-hamburger:hover, .p-hamburger:focus {
   box-shadow: 0 0 0.5rem rgba(255, 255, 255, 0.5);
 }
-
 .p-hamburger__line {
   position: absolute;
   top: 0;
@@ -1258,28 +1075,25 @@ SP画面
   height: 2px;
   /* お肉の高さ */
   background-color: #333;
+  -webkit-transition: inherit;
   transition: inherit;
 }
-
-.p-hamburger__line::before,
-.p-hamburger__line::after {
+.p-hamburger__line::before, .p-hamburger__line::after {
   content: '';
   position: absolute;
   display: block;
   width: 100%;
   height: 100%;
   background-color: inherit;
+  -webkit-transition: inherit;
   transition: inherit;
 }
-
 .p-hamburger__line::before {
   top: -7px;
 }
-
 .p-hamburger__line::after {
   top: 7px;
 }
-
 .p-drawer {
   position: fixed;
   left: 0;
@@ -1290,33 +1104,31 @@ SP画面
   height: 100%;
   background-color: #fff;
   transform: translateX(100%);
-  transition: transform .3s ease-in-out;
+  -webkit-transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
 }
-
 .p-hamburger[aria-expanded="true"] .p-hamburger__line {
   background-color: transparent;
 }
-
 .is-drawerActive .p-drawer {
   transform: translateX(0);
 }
-
-.p-hamburger[aria-expanded="true"] .p-hamburger__line::before,
-.p-hamburger[aria-expanded="true"] .p-hamburger__line::after {
+.p-hamburger[aria-expanded="true"] .p-hamburger__line::before, .p-hamburger[aria-expanded="true"] .p-hamburger__line::after {
   top: 0;
   background-color: #333;
 }
-
 .p-hamburger[aria-expanded="true"] .p-hamburger__line::before {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-
 .p-hamburger[aria-expanded="true"] .p-hamburger__line::after {
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
-
 /* ハンバーガーメニュー開封
-------------------------------------------- */
+ ------------------------------------------- */
 .hamburger__nav {
   display: none;
   width: 100vw;
@@ -1326,7 +1138,6 @@ SP画面
   left: 0;
   z-index: 1;
 }
-
 .hamburger__list {
   display: flex;
   flex-direction: column;
@@ -1334,61 +1145,53 @@ SP画面
   justify-content: center;
   width: 100%;
   height: 100%;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 1);
   z-index: 1;
 }
-
 .hamburger__nav.hamburger__list {
   transform: translate(-50%, -50%);
 }
-
 .hamburger__item {
   padding: 10px 20px;
   border: 1px solid #9e9393;
   border-radius: 15px;
 }
-
 .hamburger__text {
   text-align: center;
   margin-top: 25px;
 }
-
 .hamburger__item {
   font-family: 'Lato';
   font-size: 2.8rem;
   font-weight: 400;
-  line-height: 1.21429;
+  line-height: 1.2142857143;
   letter-spacing: 0.2em;
   cursor: pointer;
 }
-
 .hamburger__text {
   font-family: '游ゴシック', 'Yu Gothic', YuGothic;
   font-size: 1.4rem;
   font-weight: 400;
-  line-height: 1.71429;
+  line-height: 1.7142857143;
   letter-spacing: 0.2em;
 }
-
 /* -------------------------------------
-レスポンシブ min-width: 600px; 
-----------------------------------------*/
+ レスポンシブ min-width: 600px; 
+ ----------------------------------------*/
 @media screen and (min-width: 600px) {
   .c-button {
     display: none;
   }
 }
-
 /* ===============================================*/
 /* #Concept
-/*=============================================== */
+ /*=============================================== */
 .header {
   position: relative;
   text-align: center;
   background: linear-gradient(60deg, #d9f1ff 0%, #4eeaff 100%);
   color: white;
 }
-
 .logo {
   width: 50px;
   fill: white;
@@ -1396,7 +1199,6 @@ SP画面
   display: inline-block;
   vertical-align: middle;
 }
-
 .concept__title {
   font-family: 'Noto Sans', sans-serif;
   font-size: 3.2rem;
@@ -1404,14 +1206,12 @@ SP画面
   line-height: 0.9375;
   letter-spacing: 0.1em;
 }
-
 .inner-header {
   height: 65vh;
   width: 100%;
   margin: 0;
   padding: 0;
 }
-
 .flex {
   /*Flexbox for containers*/
   display: flex;
@@ -1419,42 +1219,35 @@ SP画面
   align-items: center;
   text-align: center;
 }
-
 .waves {
   position: relative;
   width: 100%;
   height: 15vh;
   margin-bottom: -7px;
-  /*Fix for safari gap*/
   min-height: 100px;
+  /*Fix for safari gap*/
   max-height: 150px;
 }
-
 /* Animation */
 .parallax > use {
   animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
 }
-
 .parallax > use:nth-child(1) {
   animation-delay: -2s;
   animation-duration: 7s;
 }
-
 .parallax > use:nth-child(2) {
   animation-delay: -3s;
   animation-duration: 10s;
 }
-
 .parallax > use:nth-child(3) {
   animation-delay: -4s;
   animation-duration: 13s;
 }
-
 .parallax > use:nth-child(4) {
   animation-delay: -5s;
   animation-duration: 20s;
 }
-
 @keyframes move-forever {
   0% {
     transform: translate3d(-90px, 0, 0);
@@ -1463,10 +1256,9 @@ SP画面
     transform: translate3d(85px, 0, 0);
   }
 }
-
 /* ===============================================*/
 /*  max-width: 768px
-/*=============================================== */
+ /*=============================================== */
 /*Shrinking for mobile*/
 @media (max-width: 768px) {
   .waves {
@@ -1475,11 +1267,10 @@ SP画面
   }
   .concept__title {
     font-size: 2.2rem;
-    line-height: 1.36364;
+    line-height: 1.3636363636;
     letter-spacing: 0.2em;
   }
 }
-
 .about__wrapper {
   display: flex;
   flex-direction: column;
@@ -1487,77 +1278,58 @@ SP画面
   min-width: 300px;
   margin: 0 auto;
 }
-
 .about__catch {
   text-align: justify;
 }
-
-.about__catch,
-.about__icon {
+.about__catch, .about__icon {
   margin-bottom: 30px;
 }
-
 .about__icon {
   max-width: 200px;
 }
-
 .about__title {
   float: left;
   width: 40%;
 }
-
 .about__text {
   float: right;
   width: 60%;
 }
-
-.about__title,
-.about__text {
+.about__title, .about__text {
   margin-bottom: 10px;
 }
-
 .about__inner {
   min-width: 300px;
   display: flex;
   flex-direction: column;
 }
-
 .about__name {
   margin: 20px 0 15px;
 }
-
-.about__catch,
-.about__name,
-.about__title,
-.about__text {
+.about__catch, .about__name, .about__title, .about__text {
   font-family: '游ゴシック', 'Yu Gothic', YuGothic;
 }
-
 .about__catch {
   font-size: 1.5rem;
   font-weight: 300;
-  line-height: 1.33333;
+  line-height: 1.3333333333;
   letter-spacing: 0.07em;
 }
-
-.about__name,
-.about__title {
+.about__name, .about__title {
   font-size: 1.4rem;
   font-weight: 700;
-  line-height: 1.07143;
+  line-height: 1.0714285714;
   letter-spacing: 0.05em;
 }
-
 .about__text {
   font-size: 1.4rem;
   font-weight: 300;
-  line-height: 1.07143;
+  line-height: 1.0714285714;
   letter-spacing: 0.05em;
 }
-
 /* -------------------------------------
-レスポンシブ min-width: 600px; 
-----------------------------------------*/
+ レスポンシブ min-width: 600px; 
+ ----------------------------------------*/
 @media screen and (min-width: 600px) {
   .about__wrapper {
     display: flex;
@@ -1574,10 +1346,7 @@ SP画面
   .about__inner {
     max-width: 50%;
   }
-  .about__catch,
-  .about__name,
-  .about__title,
-  .about__text {
+  .about__catch, .about__name, .about__title, .about__text {
     font-family: '游ゴシック', 'Yu Gothic', YuGothic;
   }
   .about__catch {
@@ -1586,19 +1355,16 @@ SP画面
     line-height: 2;
     letter-spacing: 0.5em;
   }
-  .about__title,
-  .about__text,
-  .about__name {
+  .about__title, .about__text, .about__name {
     font-size: 1.4rem;
     font-weight: 300;
-    line-height: 1.35714;
+    line-height: 1.3571428571;
     letter-spacing: 0.15em;
   }
 }
-
 /* -------------------------------------
-レスポンシブ min-width: 1025px; 
-----------------------------------------*/
+ レスポンシブ min-width: 1025px; 
+ ----------------------------------------*/
 @media screen and (min-width: 1025px) {
   .about__icon {
     max-width: 30%;
@@ -1607,56 +1373,43 @@ SP画面
     max-width: 60%;
   }
 }
-
 /* ===============================================*/
 /*  #service
-/*=============================================== */
+ /*=============================================== */
 .service__item {
   box-sizing: content-box;
   margin-bottom: 20px;
 }
-
 .service__title {
   padding-bottom: 10px;
 }
-
 .service__sub__title {
   margin-bottom: 10px;
 }
-
-.service__title,
-.service__sub__title,
-.service__icon {
+.service__title, .service__sub__title, .service__icon {
   text-align: center;
 }
-
 .service__text {
   text-align: justify;
 }
-
 .service__icon {
   margin-bottom: 10px;
 }
-
 .service__icon > img {
   max-width: 98px;
   height: 102px;
 }
-
 /* Font
-  /*----------------------- */
-.service__title,
-.service__sub__title {
+ /*----------------------- */
+.service__title, .service__sub__title {
   font-family: '游ゴシック', 'Yu Gothic', YuGothic;
 }
-
 .service__title {
   font-size: 2.5rem;
   font-weight: 400;
   line-height: 1;
   letter-spacing: 0.1em;
 }
-
 .service__sub__title {
   font-size: 1.4rem;
   font-weight: 400;
@@ -1664,17 +1417,15 @@ SP画面
   letter-spacing: 0.24em;
   color: #858585;
 }
-
 .service__text {
   font-size: 1.4rem;
   font-weight: 300;
-  line-height: 1.42857;
+  line-height: 1.4285714286;
   letter-spacing: 0.17em;
 }
-
 /* -------------------------------------
-  レスポンシブ min-width: 600px; 
-  ----------------------------------------*/
+ レスポンシブ min-width: 600px; 
+ ----------------------------------------*/
 @media screen and (min-width: 600px) {
   .service__wrapper {
     margin-right: -20px;
@@ -1689,9 +1440,7 @@ SP画面
   .service__sub__title {
     margin-bottom: 45px;
   }
-  .service__title,
-  .service__sub__title,
-  .service__icon {
+  .service__title, .service__sub__title, .service__icon {
     text-align: center;
   }
   .service__item {
@@ -1711,33 +1460,27 @@ SP画面
     letter-spacing: 0.17em;
   }
 }
-
 /* ===============================================*/
 /*  #works
-/*=============================================== */
+ /*=============================================== */
 .works__list {
   display: none;
 }
-
 .slider {
   margin: 0 auto;
   width: 80%;
 }
-
 .slider img {
   height: auto;
   width: 100%;
 }
-
 /*slick setting*/
-.slick-prev:before,
-.slick-next:before {
+.slick-prev:before, .slick-next:before {
   color: #000;
 }
-
 /* -------------------------------------
-レスポンシブ min-width: 600px; 
-----------------------------------------*/
+ レスポンシブ min-width: 600px; 
+ ----------------------------------------*/
 @media screen and (min-width: 600px) {
   .slider {
     display: none;
@@ -1754,77 +1497,64 @@ SP画面
     max-width: calc((100% / 3)-2vw);
   }
   .works__item > a:hover {
-    opacity: .5;
+    opacity: 0.5;
   }
   .works__item > img {
     object-fit: cover;
   }
 }
-
 /* ===============================================*/
 /*  #contact
-/*=============================================== */
+ /*=============================================== */
 .contact__inner {
   max-width: 700px;
   margin: 0 auto;
 }
-
 .contact__item {
   max-width: 280px;
   text-align: center;
 }
-
 .contact__item > a:hover {
   display: block;
-  opacity: .5;
+  opacity: 0.5;
 }
-
 .contact__title {
   margin-bottom: 10px;
 }
-
 .contact__sub__title {
   margin-bottom: 20px;
 }
-
 .contact__img {
   width: 50px;
   margin: 0 auto 20px;
 }
-
 .contact__text {
   margin-top: 20px;
   text-align: center;
   padding: 0 5%;
 }
-
 .contact__wrapper {
   padding-bottom: 70px;
 }
-
 .contact__title {
   font-size: 2rem;
   font-weight: 400;
   line-height: 1.5;
   letter-spacing: 0.15em;
 }
-
 .contact__sub__title {
   color: #858585;
 }
-
-.contact__sub__title,
-.contact__text {
+.contact__sub__title, .contact__text {
   font-family: '游ゴシック', 'Yu Gothic', YuGothic;
   font-size: 1.4rem;
   font-weight: 300;
-  line-height: 1.42857;
+  line-height: 1.4285714286;
   letter-spacing: 0.25em;
 }
-
 /* -------------------------------------
-レスポンシブ min-width: 600px; 
-----------------------------------------*/
+ レスポンシブ min-width: 600px; 
+ ----------------------------------------*/
 @media screen and (min-width: 600px) {
   .contact__item {
     max-width: 280px;
@@ -1832,7 +1562,7 @@ SP画面
   }
   .contact__item > a:hover {
     display: block;
-    opacity: .5;
+    opacity: 0.5;
   }
   .contact__title {
     margin-bottom: 10px;
@@ -1857,20 +1587,18 @@ SP画面
   .contact__sub__title {
     color: #858585;
   }
-  .contact__sub__title,
-  .contact__text {
+  .contact__sub__title, .contact__text {
     font-family: '游ゴシック', 'Yu Gothic', YuGothic;
     font-size: 1.4rem;
     font-weight: 300;
-    line-height: 1.42857;
+    line-height: 1.4285714286;
     letter-spacing: 0.25em;
   }
 }
-
 /* オープンアニメーション
-/*----------------------------------------------- */
+ /*----------------------------------------------- */
 .start {
-  background: #FFF;
+  background: #fff;
   position: fixed;
   top: 0;
   left: 0;
@@ -1878,7 +1606,6 @@ SP画面
   width: 100%;
   z-index: 9000;
 }
-
 .open__text {
   position: fixed;
   left: 50%;
@@ -1892,30 +1619,27 @@ SP画面
   line-height: 1.875;
   letter-spacing: 0.1em;
 }
-
 /* -------------------------------------
-レスポンシブ min-width: 600px; 
-----------------------------------------*/
+ レスポンシブ min-width: 600px; 
+ ----------------------------------------*/
 @media screen and (min-width: 600px) {
   .open__text {
     position: fixed;
-    left: 55%;
+    left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     width: 280px;
   }
 }
-
 .service__flexbox {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
   flex-direction: column;
 }
-
 /* -------------------------------------
-レスポンシブ min-width: 600px; 
-----------------------------------------*/
+ レスポンシブ min-width: 600px; 
+ ----------------------------------------*/
 @media screen and (min-width: 600px) {
   .service__flexbox {
     display: flex;
