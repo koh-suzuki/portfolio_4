@@ -157,6 +157,10 @@
 
  .header__inner { position:relative; display:flex; justify-content:space-between; align-items:flex-start; min-width:320px; margin:0 auto; height:100%; }
 
+ .header__logo > a { text-decoration:none; color:#333; }
+
+ .header__logo > a:hover { opacity:0.5; }
+
  /*** SNSアイコン ***/ .sns__wrapper { position:absolute; bottom:15%; left:50%; transform:translateX(-50%); display:flex; align-items:center; }
 
  .insta__item,.tw__item { width:30px; height:auto; margin:0 15px; }
@@ -646,9 +650,11 @@
 
  .slider { margin:0 auto; width:80%; }
 
- .slider img { height:auto; width:100%; }
+ .slider img { height:250px; width:100%; }
 
  /*slick setting*/ .slick-prev:before,.slick-next:before { color:#000; }
+
+ .noimage { text-align:center; font-size:2.5rem; font-weight:bold; line-height:1.2; letter-spacing:0.0015em; }
 
  /* -------------------------------------
  レスポンシブ min-width: 600px; 
@@ -658,11 +664,15 @@
 
  .works__list { display:grid; gap:2vw; grid-template-columns:1fr 1fr 1fr; }
 
- .works__item { max-width:calc((100% / 3)-2vw); }
+ .works__item { height:175px; }
+
+ .works__item > img { object-fit:cover; height:100%; }
+
+ .works__item > a { display:block; height:100%; }
+
+ .works__item > a > img { object-fit:cover; height:100%; }
 
  .works__item > a:hover { opacity:0.5; }
-
- .works__item > img { object-fit:cover; }
 
  }
 

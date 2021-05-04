@@ -22,10 +22,12 @@
   <section class="l-section__inner footer__flexbox footer__side">
     <nav class="footer__nav">
       <ul class="footer__list flexbox__start">
-        <li class="footer__item"><a href="#about">About</a></li>
-        <li class="footer__item"><a href="#service">Service</a></li>
-        <li class="footer__item"><a href="#works">Works</a></li>
-        <li class="footer__item"><a href="#contact">Contact</a></li>
+        <?php if (!is_page()): ?>
+          <li class="footer__item"><a href="#about">About</a></li>
+          <li class="footer__item"><a href="#service">Service</a></li>
+          <li class="footer__item"><a href="#works">Works</a></li>
+          <li class="footer__item"><a href="<?php home_url(); ?>/contact">Contact</a></li>
+        <?php endif; ?>
       </ul>
     </nav>
     <p class="copyright">

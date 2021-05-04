@@ -21,6 +21,15 @@ SP画面
   margin: 0 auto;
   height: 100%;
 }
+.header__logo {
+  > a {
+    text-decoration: none;
+    color: #333333;
+    &:hover {
+      opacity: .5;
+    }
+  }
+}
 /*** SNSアイコン ***/ 
 .sns__wrapper {
   position: absolute;

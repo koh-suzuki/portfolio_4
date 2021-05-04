@@ -20,10 +20,11 @@
         <?php foreach ($menu_items as $item): ?>        
           <li class="header__item"><a href="<?php echo esc_attr($item->url); ?>"><?php echo esc_html($item->title); ?></a></li>
         <?php endforeach; ?>
-        <li class="header__item"><a href="#about">About</a></li>
-        <li class="header__item"><a href="#service">Service</a></li>
-        <li class="header__item"><a href="#works">Works</a></li>
-        
+        <?php if( is_front_page() ): ?>
+          <li class="header__item"><a href="#about">About</a></li>
+          <li class="header__item"><a href="#service">Service</a></li>
+          <li class="header__item"><a href="#works">Works</a></li>
+        <?php endif; ?>
       </ul>
     </nav>
     <nav class="hamburger__nav">
