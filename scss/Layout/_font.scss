@@ -1,0 +1,8 @@
+/* 404.php */ 
+.section_title {
+  @include f_around(2.8, 4.2, 300, 100);
+}
+.section_text,
+.screen-reader-text {
+  @include f_around(1.6, 2.4, 300, 100);
+}

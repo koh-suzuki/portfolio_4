@@ -12,15 +12,6 @@ SP画面
   background-color: #ffffff;
   padding: 10px 2vw;
 }
-.header__inner {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  min-width: 320px;
-  margin: 0 auto;
-  height: 100%;
-}
 .header__logo {
   > a {
     text-decoration: none;
@@ -71,12 +62,6 @@ SP画面
     height: 270px;
     background-color: #ffffff;
     padding: 10px 2vw;
-  }
-  .header__inner {
-    position: relative;
-    max-width: 920px;
-    margin: 0 auto;
-    height: 100%;
   }
   .header__logo {
     position: absolute;

@@ -1,0 +1,51 @@
+/*●個別記事のページナビ*/
+.p-navigation {
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 30px;
+  width: 100%;
+}
+.navitop {
+  float:left;
+  width:26%;
+  text-align:center;
+}
+.navileft {
+  float:left;
+  width:37%;
+  text-align:left;
+  word-break:break-all;
+  line-height:1.5em;
+}
+.naviright {
+  float:right;
+  width:37%;
+  text-align:right;
+  word-break:break-all;
+  line-height:1.5em;
+}
+.navitop,
+.naviright,
+.navileft {
+  @include f_around(1.6, 2.4, 300, 50);
+}
+
+@include mq-up($breakpoint: md) {
+  .p-navigation {
+    margin-top: 50px;
+  }
+  .navitop {
+    width:20%;
+  }
+  .navileft {
+    width:40%;
+  }
+  .naviright {
+    width:40%;
+  }
+  .navitop,
+  .naviright,
+  .navileft {
+    @include f_around(2.4, 3.8, 300, 50);
+  }  
+}

@@ -2,18 +2,17 @@
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
-  flex-direction: column;
 }
 
 /* -------------------------------------
-レスポンシブ min-width: 600px; 
+レスポンシブ min-width: 638px; 
 ----------------------------------------*/
 @include mq-up($breakpoint: md) {
   .service__flexbox {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
-    justify-content: space-between;
-    flex-direction: unset;
+    justify-content: center;
   }    
 }
+

@@ -2,8 +2,11 @@
 /*  #service
 /*=============================================== */
 .service__item {
-  box-sizing: content-box;
-  margin-bottom: 20px;
+  width: 90%;
+  margin: 0 auto;
+}
+.service__item:not(:last-child) {
+  margin-bottom: 50px;
 }
 .service__title {
   padding-bottom: 10px;
@@ -44,16 +47,16 @@
   }
   
   /* -------------------------------------
-  レスポンシブ min-width: 600px; 
+  レスポンシブ min-width: 637px; 
   ----------------------------------------*/
   @include mq-up($breakpoint: md) {
-    .service__wrapper {
-      margin-right: -20px;
-    }
     .service__item {
-      box-sizing: content-box;
-      margin-right: 20px;
+      width: 280PX;
+      margin: 0;
     }
+    .service__item:not(:last-child) {
+        margin-right: 30px;
+      }
     .service__title {
       padding-bottom: 16px;
     }
@@ -64,9 +67,6 @@
     .service__sub__title,
     .service__icon {
       text-align: center;
-    }
-    .service__item {
-      max-width: calc((100% / 3) - 20px);
     }
     .service__icon {
       margin-bottom: 40px;

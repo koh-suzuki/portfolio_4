@@ -5,13 +5,19 @@
 .works__list {
   display: none;
 }
-
+.single_content_img,
+.works_content_item,
+.works__item {
+  box-shadow: 0 0 8px gray;
+}
+.works_content_item {
+  margin-bottom: 40px;
+}
 .slider{
   margin: 0 auto;
   width: 80%;
 }
 .slider img{
-  height: 250px;
   width: 100%;
 }
 /*slick setting*/
@@ -29,7 +35,7 @@
 レスポンシブ min-width: 600px; 
 ----------------------------------------*/
 @include mq-up($breakpoint: md) {
-  .slider {
+  .slider__wrapper {
     display: none;
   }
   .slick-slide img {
@@ -40,11 +46,10 @@
     gap: 2vw;
     grid-template-columns: 1fr 1fr 1fr;
   }
+  .works_content_item,
   .works__item {
-    height: 175px;
     > img {
       object-fit: cover;
-      height: 100%;
     }
     > a {
       display: block;
@@ -58,4 +63,10 @@
       opacity: .5;
     }
   }
+  .works_content_item:not(:last-child) {
+    margin-bottom: 130px;
+  }  
+  // .works_single_item {
+  //   margin-bottom: 30px;
+  // }
 }

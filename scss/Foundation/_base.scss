@@ -47,14 +47,13 @@ a {
   color: #333333;
 }
 img {
-  vertical-align: top;
+  vertical-align: middle;
   width: 100%;
+  height: auto;
 }
 ul {
   list-style: none;
 }
-
-
 
 .flexbox__start {
   display: flex;

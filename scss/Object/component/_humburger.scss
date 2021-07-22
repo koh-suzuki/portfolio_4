@@ -143,8 +143,6 @@
 }
 .hamburger__item{
   padding: 10px 20px;
-  border: 1px solid #9e9393;
-  border-radius: 15px;
 }
 .hamburger__text {
   text-align: center;
@@ -153,7 +151,7 @@
 
 .hamburger__item{
   font-family: 'Lato';
-  @include f_around(2.8, 3.4, 400, 200);
+  @include f_around(2.4, 3.8, 400, 200);
   cursor: pointer;
 }
 .hamburger__text {
