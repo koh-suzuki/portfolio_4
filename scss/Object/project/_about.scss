@@ -1,4 +1,4 @@
-
+@use "../../Global";
 .about__wrapper {
   display: flex;
   flex-direction: column;
@@ -6,7 +6,7 @@
   margin: 0 auto;
 }
 .about_prof,
-.about__catch {
+.c-about__catch {
   text-align: justify;
 }
 .about_prof {
@@ -16,7 +16,7 @@
 .about_p {
   margin-bottom: 1.6rem;
 }
-.about__catch,
+.c-about__catch,
 .about__icon {
   margin-bottom: 30px;
 }
@@ -46,35 +46,35 @@
   margin: 20px 0 15px
 }
 
-.about__catch,
+.c-about__catch,
 .about_prof,
 .about__name,
 .about__title,
 .about__text {
   font-family: '游ゴシック', 'Yu Gothic', YuGothic;
 }
-.about__catch,
+.c-about__catch,
 .about_prof {
-  @include f_around(1.5, 2, 300, 70);
+  @include Global.f_around(1.5, 2, 300, 70);
 }
 .about__name,
 .about__title{
-  @include f_around(1.4, 1.5, 700, 50);
+  @include Global.f_around(1.4, 1.5, 700, 50);
 }
 .about__text{
-  @include f_around(1.4, 1.5, 300, 50);
+  @include Global.f_around(1.4, 1.5, 300, 50);
 } 
 
 /* -------------------------------------
 レスポンシブ min-width: 600px; 
 ----------------------------------------*/
-@include mq-up($breakpoint: md) {
+@include Global.mq-up($breakpoint: md) {
   .about__wrapper {
     display: flex;
     justify-content: space-between;
     flex-direction: unset;
   }
-  .about__catch {
+  .c-about__catch {
     margin-bottom: 70px;
   }
   .about__icon {
@@ -86,26 +86,26 @@
   .about_prof {
     margin-top: 50px;
   }
-  .about__catch,
+  .c-about__catch,
   .about__name,
   .about__title,
   .about__text {
     font-family: '游ゴシック', 'Yu Gothic', YuGothic;
   }
-  .about__catch,
+  .c-about__catch,
   .about_prof {
-    @include f_around(1.6, 3.2, 300, 500);
+    @include Global.f_around(1.6, 3.2, 300, 500);
   }
   .about__title,
   .about__text,
   .about__name {
-    @include f_around(1.4, 1.9, 300, 150);
+    @include Global.f_around(1.4, 1.9, 300, 150);
   } 
 }
 /* -------------------------------------
 レスポンシブ min-width: 1025px; 
 ----------------------------------------*/
-@include mq-up($breakpoint: lg) {
+@include Global.mq-up($breakpoint: lg) {
   .about__wrapper {
     max-width: 845px;
   }

@@ -1,11 +1,11 @@
 <section class="l-section__wrapper" id="about">
   <?php if (is_front_page()) : ?>
-    <h2 class="section__title">About me</h2>
-    <p class="section__text">私について</p>
+    <h2 class="c-about__catch">About me</h2>
+    <p class="c-section__text">私について</p>
   <?php endif; ?>
-  <section class="l-section__inner l-about_wrapper">
+  <section class="c-c-section__inner c-about">
     <?php if (is_page('about')) : ?>
-      <p class="about__catch">
+      <p class="c-about__catch">
         人を惹きつけ「思い」「繋がり」「価値」を紡いでゆく
       </p>
     <?php endif; ?>

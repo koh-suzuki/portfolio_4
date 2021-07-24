@@ -1,3 +1,4 @@
+@use "../Global";
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,100&family=Noto+Sans+JP&family=Noto+Sans:wght@400;700&display=swap');
 
 
@@ -6,19 +7,14 @@
 .l-section__wrapper {
   padding-bottom: 80px;
 }
-.l-section__inner {
-  width: 90%;
-  margin: 60px auto 0;
-  height: 100%;
-}
 .l-single__wrapper {
   padding-bottom: 50px;
 }
-.section__title {
+.c-about__catch {
   text-align: center;
   margin-bottom: 15px;
 }
-.section__text {
+.c-section__text {
   color: #858585;
   margin-bottom: 60px;
   text-align: center;
@@ -28,7 +24,7 @@
 /* --------------------------------------
 レスポンシブ min-width: 600px; 
 ----------------------------------------*/
-@include mq-up($breakpoint: md) {
+@include Global.mq-up($breakpoint: md) {
   .l-section__wrapper {
     padding-bottom: 100px;
   }
@@ -54,11 +50,11 @@
 /* --------------------------------------
 レスポンシブ min-width: 1025px; 
 ----------------------------------------*/
-@include mq-up($breakpoint: lg) {
+@include Global.mq-up($breakpoint: lg) {
   .l-section__wrapper {
     padding-bottom: 130px;
   }
-  .l-about_wrapper {
+  .c-about {
     width: 70%;
   }
 }
@@ -70,7 +66,7 @@
   margin-bottom: 40px;
 }
 .form-label {
-  @include f_around(1.4,1.8, 300, 100);
+  @include Global.f_around(1.4,1.8, 300, 100);
 }
 .btn__contact {
   width: 50%;
@@ -109,7 +105,7 @@
   display: inline-block;
 }
 
-@include mq-up($breakpoint: md) {
+@include Global.mq-up($breakpoint: md) {
   .text__left {
     text-align: left;
   }
@@ -127,7 +123,7 @@
     resize: none
   }
   .form-label {
-    @include f_around(1.4,1.8, 300, 100);
+    @include Global.f_around(1.4,1.8, 300, 100);
   }
   .contact__form {
     margin: 10px 0 20px;
@@ -158,7 +154,7 @@
   }
 }
 
-@include mq-up($breakpoint: lg) {
+@include Global.mq-up($breakpoint: lg) {
   .contact__form__text {
     text-align: left;
   }
@@ -193,43 +189,43 @@
 }
 .thanks__main__title {
   font-family:'Lato', sans-serif;
-  @include f_around(3.2, 3.2, 400, 100);
+  @include Global.f_around(3.2, 3.2, 400, 100);
 }
 .thanks__sub__title {
-  @include f_around(1.3, 2.2, 400, 100);
+  @include Global.f_around(1.3, 2.2, 400, 100);
 }
 .thanks__text {
-  @include f_around(1, 1.8, 400, 150);
+  @include Global.f_around(1, 1.8, 400, 150);
 }
 
 
 /* --------------------------------------
 レスポンシブ min-width: 600px; 
 ----------------------------------------*/
-@include mq-up($breakpoint: md) {
+@include Global.mq-up($breakpoint: md) {
   .thanks__wrapper {
     margin-bottom: 45px;
   }
 
   .thanks__main__title {
     font-family:'Lato', sans-serif;
-    @include f_around(4, 4, 400, 150);
+    @include Global.f_around(4, 4, 400, 150);
   }
   .thanks__sub__title {
-    @include f_around(1.8, 3, 400, 150);
+    @include Global.f_around(1.8, 3, 400, 150);
   }
   .thanks__text {
-    @include f_around(1.4, 2.5, 400, 100);
+    @include Global.f_around(1.4, 2.5, 400, 100);
   }
   .link__home {
-    @include f_around(1.4, 2.5, 400, 100);
+    @include Global.f_around(1.4, 2.5, 400, 100);
   }
 }
 
 /* --------------------------------------
 レスポンシブ max-width: 1025px; 
 ----------------------------------------*/
-@include mq-up($breakpoint: lg) {
+@include Global.mq-up($breakpoint: lg) {
   .thanks__wrapper {
     margin-bottom: 70px;
   }
@@ -242,15 +238,15 @@
 
   .thanks__main__title {
     font-family:'Lato', sans-serif;
-    @include f_around(4, 4, 400, 150);
+    @include Global.f_around(4, 4, 400, 150);
   }
   .thanks__sub__title {
-    @include f_around(2.4, 3.5, 400, 150);
+    @include Global.f_around(2.4, 3.5, 400, 150);
   }
   .thanks__text {
-    @include f_around(2, 3.5, 400, 150);
+    @include Global.f_around(2, 3.5, 400, 150);
   }
   .link__home {
-    @include f_around(1.4, 3.5, 400, 150);
+    @include Global.f_around(1.4, 3.5, 400, 150);
   }
 }

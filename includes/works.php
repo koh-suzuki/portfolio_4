@@ -1,10 +1,10 @@
 <section class="l-section__wrapper" id="works">
   <?php if (is_front_page()) : ?>
-    <h2 class="section__title">Works</h2>
-    <p class="section__text">制作実績</p>
+    <h2 class="c-about__catch">Works</h2>
+    <p class="c-section__text">制作実績</p>
   <?php endif; ?>
   <?php if (have_posts()) : ?>
-    <section class="l-section__inner works__list">
+    <section class="c-c-section__inner works__list">
       <?php while (have_posts()) :
         $q = $wp_query->post_count;
         for ($i = 0; $i < $q; $i++) :
@@ -22,7 +22,7 @@
       <?php endwhile; ?>
     </section>
   <?php else : ?>
-    <section class="l-section__inner">
+    <section class="c-c-section__inner">
       <p class="noimage">準備中...</p>
     </section>
   <?php endif; ?>
@@ -42,7 +42,7 @@
       </ul>
     </section>
   <?php else : ?>
-    <section class="l-section__inner">
+    <section class="c-c-section__inner">
       <p class="noimage">準備中...</p>
     </section>
   <?php endif; ?>

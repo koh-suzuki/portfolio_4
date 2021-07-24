@@ -11,7 +11,7 @@
 <body>
   <main class="main">
     <section class="l-section__wrapper l-thanks">
-      <section class="l-section__inner thanks__wrapper">
+      <section class="c-c-section__inner thanks__wrapper">
         <p class="thanks__main__title">Thank you</p>
         <h2 class="thanks__sub__title">お問い合わせありがとうございました</h2>
         <p class="thanks__text">この度は AOSHIRO WORKS へお問い合わせいただき <br> 誠にありがとうございます。 <br> 1営業日以内を目安にご連絡致します。</p>

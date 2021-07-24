@@ -1,3 +1,4 @@
+@use "../../Global";
 /* オープンアニメーション
 /*----------------------------------------------- */
 .start {
@@ -19,13 +20,13 @@
 	z-index: 9999;
   color: #000;
   font-family: 'Noto Sans', sans-serif;
-  @include f_around(1.6, 3,false, 100);
+  @include Global.f_around(1.6, 3,false, 100);
 }
 
 /* -------------------------------------
 レスポンシブ min-width: 600px; 
 ----------------------------------------*/
-@include mq-up($breakpoint: md) {
+@include Global.mq-up($breakpoint: md) {
   .open__text {
     position: fixed;
     left: 50%;

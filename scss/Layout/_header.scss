@@ -1,3 +1,4 @@
+@use "../Global";
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+JP&display=swap');
 /* # フォント
 ----------------------- */
@@ -7,11 +8,21 @@
 /* ------------------------------
 SP画面
 ------------------------------- */ 
-.l-header__wrapper {
+.l-header {
   height: 140px;
   background-color: #ffffff;
   padding: 10px 2vw;
 }
+.l-header__inner {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  min-width: 320px;
+  margin: 0 auto;
+  height: 100%;
+}
+
 .header__logo {
   > a {
     text-decoration: none;
@@ -43,25 +54,33 @@ SP画面
   display: none;
 }
 
+
+
 /* スマホ画面 フォント
 ------------------------------------------ */
 .header__logo {
   font-family: 'Noto Sans', sans-serif;
-  @include f_around(2.4, 3, 700, 50);
+  @include Global.f_around(2.4, 3, 700, 50);
 }
 
 
 /* --------------------------------------
 レスポンシブ min-width: 600px; 
 ----------------------------------------*/
-@include mq-up($breakpoint: md) {
+@include Global.mq-up($breakpoint: lg) {
 /* ------------------------------
 タブレット画面
 ------------------------------- */ 
-  .l-header__wrapper {
+  .l-header {
     height: 270px;
     background-color: #ffffff;
     padding: 10px 2vw;
+  }
+  .l-header__inner {
+    position: relative;
+    max-width: 920px;
+    margin: 0 auto;
+    height: 100%;
   }
   .header__logo {
     position: absolute;
@@ -85,18 +104,18 @@ SP画面
     }
   }
   .header__nav {
-    display: block;
     position: absolute;
     bottom: 10%;
     right: 0%;
   }
+  
   .header__list {
     display: flex;
     align-items: center;
   }
   .header__item {
     margin-left: 2vw;
-    @include f_around(1.6, 2.4, bold, 5);
+    @include Global.f_around(1.6, 2.4, bold, 5);
     >a {
       color: #333333;
       padding: 5px;
@@ -110,6 +129,6 @@ SP画面
   /* タブレット画面用フォント */ 
   .header__logo {
     font-family: 'Noto Sans', sans-serif;
-    @include f_around(2.4, 3.6, 700, 200);
+    @include Global.f_around(2.4, 3.6, 700, 200);
   }
 }

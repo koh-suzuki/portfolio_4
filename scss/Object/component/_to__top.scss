@@ -1,3 +1,4 @@
+@use "../../Global";
 .btn-top {
   width: 30px;
   margin: 0 auto;
@@ -5,7 +6,7 @@
 /* -------------------------------------
 レスポンシブ min-width: 600px; 
 ----------------------------------------*/
-@include mq-up($breakpoint: md) {
+@include Global.mq-up($breakpoint: md) {
   .to__top {
     padding-bottom: 30px;
   }

@@ -1,4 +1,4 @@
-
+@use "../../Global";
 .pnavi{
   margin:100px 0 80px;
   text-align: center;
@@ -16,7 +16,7 @@
   background:#fff;
 }
 .page-numbers {
-  @include f_around(1.6, 2, 300, 0);
+  @include Global.f_around(1.6, 2, 300, 0);
 }
 .pnavi .current{
   padding:10px 15px;
@@ -38,7 +38,7 @@
   padding: 0;
 }
 
-@include mq-up($breakpoint: md) {
+@include Global.mq-up($breakpoint: md) {
   .pnavi .current,
   .pnavi .page-numbers{
     padding:20px 25px;

@@ -16,10 +16,10 @@
     <?php endforeach; ?>
   </ul>
 
-  <section class="l-footer_wrapper">
-    <div class="l-footer_inner">
-      <nav class="footer__nav">
-        <ul class="footer__list flexbox__start">
+  <section class="c-footer">
+    <div class="c-footer_inner">
+      <nav class="c-footer__nav">
+        <ul class="c-footer__list flexbox__start">
           <?php
           if (is_page('contact')) {
             $menu_name = 'contact_nav';
@@ -35,7 +35,7 @@
       
           $menu_items = wp_get_nav_menu_items($menu->term_id);
           foreach ($menu_items as $item) : ?>
-            <li class="footer__item"><a href="<?php echo esc_attr($item->url); ?>"><?php echo esc_html($item->title); ?></a></li>
+            <li class="c-footer__item"><a href="<?php echo esc_attr($item->url); ?>"><?php echo esc_html($item->title); ?></a></li>
           <?php endforeach; ?>
         </ul>
       </nav>

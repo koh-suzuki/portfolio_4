@@ -1,44 +1,43 @@
 /* ===============================================*/
 /* # Foundation
 /*=============================================== */
-@import 'Foundation/reset';
-@import 'Foundation/mediaquery';
-@import 'Foundation/base';
+@use 'Foundation/reset';
+@use 'Foundation/base';
 
-/* ===============================================*/
-/* # Layout
-/*=============================================== */
-@import 'Layout/header';
-@import 'Layout/main';
-@import 'Layout/footer';
-@import 'Layout/font';
+// /* ===============================================*/
+// /* # Layout
+// /*=============================================== */
+@use 'Layout/header';
+@use 'Layout/main';
+@use 'Layout/footer';
+@use 'Layout/font';
 
-/* ===============================================*/
-/* # Object
-/*=============================================== */
-// -----------------------------------------------------------------
-// Component
-// -----------------------------------------------------------------
-@import 'Object/component/to__top';
-@import 'Object/component/slick-theme.scss';
-@import 'Object/component/slick.scss';
-@import 'Object/component/humburger';
-@import 'Object/component/page';
-// -----------------------------------------------------------------
-// Project
-// -----------------------------------------------------------------
-@import 'Object/project/concept';
-@import 'Object/project/about';
-@import 'Object/project/service';
-@import 'Object/project/works';
-@import 'Object/project/contact';
-@import 'Object/project/single';
-@import 'Object/project/single-navigation';
+// /* ===============================================*/
+// /* # Object
+// /*=============================================== */
+// // -----------------------------------------------------------------
+// // Component
+// // -----------------------------------------------------------------
+@use 'Object/component/to__top';
+@use 'Object/component/slick-theme.scss';
+@use 'Object/component/slick.scss';
+@use 'Object/component/humburger';
+@use 'Object/component/page';
+// // -----------------------------------------------------------------
+// // Project
+// // -----------------------------------------------------------------
+@use 'Object/project/concept';
+@use 'Object/project/about';
+@use 'Object/project/service';
+@use 'Object/project/works';
+@use 'Object/project/contact';
+@use 'Object/project/single';
+@use 'Object/project/single-navigation';
 
-// -----------------------------------------------------------------
-// Utility
-// -----------------------------------------------------------------
-@import 'Object/utility/open';
-@import 'Object/utility/flexbox';
-@import 'Object/utility/margin';
-@import 'Object/utility/align';
+// // -----------------------------------------------------------------
+// // Utility
+// // -----------------------------------------------------------------
+@use 'Object/utility/open';
+@use 'Object/utility/flexbox';
+@use 'Object/utility/margin';
+@use 'Object/utility/align';

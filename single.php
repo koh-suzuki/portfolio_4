@@ -5,9 +5,9 @@
 <body>
   <?php get_template_part('includes/header'); ?>
   <main class="main">
-    <section class="l-sction__wrapper ">
+    <section class="c-sction ">
       <?php if (have_posts()) : ?>
-        <section class="l-section__inner l-single__wrapper">
+        <section class="c-c-section__inner l-single__wrapper">
           <?php while (have_posts()) : the_post(); ?>
             <?php if (has_post_thumbnail()) : ?>
               <h1 class="single__title"><?php the_title(); ?></h1>
@@ -54,7 +54,7 @@
           <?php get_template_part('includes/pagination'); ?>
         </section>
       <?php else : ?>
-        <section class="l-section__inner l-single__wrapper">
+        <section class="c-c-section__inner l-single__wrapper">
           <p class="noimage">準備中...</p>
           <?php get_template_part('includes/pagination'); ?>
         </section>

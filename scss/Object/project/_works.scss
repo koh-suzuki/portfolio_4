@@ -1,3 +1,4 @@
+@use "../../Global";
 /* ===============================================*/
 /*  #works
 /*=============================================== */
@@ -27,14 +28,14 @@
 }
 .noimage {
   text-align: center;
-  @include f_around(2.5, 3, bold, 1.5);
+  @include Global.f_around(2.5, 3, bold, 1.5);
 }
 
 
 /* -------------------------------------
 レスポンシブ min-width: 600px; 
 ----------------------------------------*/
-@include mq-up($breakpoint: md) {
+@include Global.mq-up($breakpoint: md) {
   .slider__wrapper {
     display: none;
   }

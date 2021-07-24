@@ -1,5 +1,5 @@
-<header class="l-header__wrapper">
-  <div class="header__inner">
+<header class="l-header">
+  <div class="l-header__inner">
     <?php if (is_front_page()) : ?>
       <h1 class="header__logo"><a href="<?php echo esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a></h1>
     <?php else : ?>

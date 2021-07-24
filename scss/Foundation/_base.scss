@@ -1,16 +1,4 @@
-@mixin f_around($pixels, $height: false, $weight: false, $spacing: false){
-  font-size: $pixels * 1rem;
-  @if $weight {
-    font-weight: $weight;
-  }
-  @if $height {
-    line-height: $height / $pixels;
-  }
-  @if $spacing {
-    letter-spacing: ($spacing / 1000) * 1em;
-  }
-}
-
+@use "../Global";
 /* ============================================== */
 /* Font
 /*=============================================== */
@@ -30,12 +18,12 @@ body {
 
 /* main
 /*----------------------- */
-.section__title {
+.c-about__catch {
   font-family: 'Lato', sans-serif;
-  @include f_around(4, 4, 400, 100);
+  @include Global.f_around(4, 4, 400, 100);
 }
-.section__text {
-  @include f_around(1.4, 1.4, 400, 100);
+.c-section__text {
+  @include Global.f_around(1.4, 1.4, 400, 100);
 }
 
 

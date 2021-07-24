@@ -1,7 +1,7 @@
 <section class="l-section__wrapper" id="service">
-  <h2 class="section__title">Service</h2>
-  <p class="section__text">サービス</p>
-  <section class="l-section__inner ">
+  <h2 class="c-about__catch">Service</h2>
+  <p class="c-section__text">サービス</p>
+  <section class="c-c-section__inner ">
     <section class="service__wrapper service__flexbox">
       <section class="service__item ">
         <h3 class="service__title">コーディング</h3>

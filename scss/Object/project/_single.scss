@@ -1,12 +1,13 @@
+@use "../../Global";
 .single__title {
   margin-bottom: 10px;
-  @include f_around(1.6, 2.4, bold, 50);
+  @include Global.f_around(1.6, 2.4, bold, 50);
 }
 .content_date,
 .content_text,
 .content_skill {
   color: #747474;
-  @include f_around(1.4, 2.1, 300, 50);
+  @include Global.f_around(1.4, 2.1, 300, 50);
 }
 .single_content_img {
   margin-bottom: 10px;
@@ -23,11 +24,11 @@
   margin-bottom: 30px;
 }
 
-@include mq-up($breakpoint: md) {
+@include Global.mq-up($breakpoint: md) {
   .content_date,
   .content_text,
   .content_skill {
-    @include f_around(1.6, 2.4, 300, 50);
+    @include Global.f_around(1.6, 2.4, 300, 50);
   }
   .single_content_inner {
     display: flex;

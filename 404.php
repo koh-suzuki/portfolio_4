@@ -5,8 +5,8 @@
 <body>
   <?php get_template_part('includes/header'); ?>
   <main class="main">
-    <section class="l-sction__wrapper">
-      <section class="section__inner container">
+    <section class="c-sction">
+      <section class="c-section__inner container">
         <h2 class="section_title">404 Not Found（ページが見つかりませんでした）</h2>
         <p class="section_text">指定された以下のページは存在しないか、または移動した可能性があります。</p>
         <p class="error_url section_text">URL ：<span><?php echo get_pagenum_link(); ?></span></p>

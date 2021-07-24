@@ -1,4 +1,4 @@
-
+@use "../../Global";
 /* ===============================================*/
 /* #Concept
 /*=============================================== */
@@ -20,7 +20,7 @@
 
 .concept__title {
   font-family: 'Noto Sans', sans-serif;
-  @include f_around(2.2, 3.7, 300, 100);
+  @include Global.f_around(2.2, 3.7, 300, 100);
   color: #fff;
   writing-mode: vertical-rl;
   > span {
@@ -147,7 +147,7 @@
 /*  min-width: 600px
 /*=============================================== */
 /*Shrinking for mobile*/
-@include mq-up($breakpoint: md) {
+@include Global.mq-up($breakpoint: md) {
   .waves {
     height:40px;
     min-height:40px;
@@ -165,7 +165,7 @@
   }
   
   .concept__title {
-    @include f_around(4.6, 5.8, 500, 200);
+    @include Global.f_around(4.6, 5.8, 500, 200);
     writing-mode: unset;
     max-width: 750px;
     > span {

@@ -1,7 +1,7 @@
 <section class="l-section__wrapper contact__wrapper" id="contact">
-  <h2 class="section__title">Contact</h2>
-  <p class="section__text">お問い合わせ</p>
-  <section class="l-section__inner">
+  <h2 class="c-about__catch">Contact</h2>
+  <p class="c-section__text">お問い合わせ</p>
+  <section class="c-c-section__inner">
     <section class="contact__inner flexbox__center">
       <section class="contact__item">
         <a href="<?php echo esc_attr(home_url()); ?>/contact" target="blanc">

@@ -5,10 +5,10 @@
 <body>
   <?php get_template_part('includes/header'); ?>
   <main class="main">
-    <section class="l-sction__wrapper">
+    <section class="c-sction">
       <section class="l-thumb_wrapper">
-        <h1 class="section__title contents__title">Works</h1>
-        <p class="section__text contents__text">制作実績</p>
+        <h1 class="c-about__catch contents__title">Works</h1>
+        <p class="c-section__text contents__text">制作実績</p>
         <?php
         $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
         $args = array(
@@ -22,7 +22,7 @@
         $the_query = new WP_Query($args);
         ?>
         <?php if ($the_query->have_posts()) : ?>
-          <!-- <section class="l-section__inner l-thumb_wrapper"> -->
+          <!-- <section class="c-c-section__inner l-thumb_wrapper"> -->
           <div class="l-content__wrapper">
             <?php while ($the_query->have_posts()) :
               $q = $wp_query->post_count;
@@ -41,7 +41,7 @@
             <?php endwhile; ?>
           </div>
         <?php else : ?>
-          <section class="l-section__inner">
+          <section class="c-c-section__inner">
             <p class="noimage">準備中...</p>
           </section>
         <?php endif; ?>

@@ -1,4 +1,4 @@
-
+@use "../../Global";
 .u-visuallyHidden {
   position: absolute;
   white-space: nowrap;
@@ -151,12 +151,12 @@
 
 .hamburger__item{
   font-family: 'Lato';
-  @include f_around(2.4, 3.8, 400, 200);
+  @include Global.f_around(2.4, 3.8, 400, 200);
   cursor: pointer;
 }
 .hamburger__text {
   font-family: '游ゴシック', 'Yu Gothic', YuGothic;
-  @include f_around(1.4, 2.4, 400, 200);
+  @include Global.f_around(1.4, 2.4, 400, 200);
 }
 
 
@@ -164,7 +164,7 @@
 /* -------------------------------------
 レスポンシブ min-width: 600px; 
 ----------------------------------------*/
-@include mq-up($breakpoint: md) {
+@include Global.mq-up($breakpoint: md) {
   .c-button {
     display: none;
   }

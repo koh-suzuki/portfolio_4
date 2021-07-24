@@ -1,3 +1,4 @@
+@use "../../Global";
 /* ===============================================*/
 /*  #service
 /*=============================================== */
@@ -36,20 +37,20 @@
     font-family: '游ゴシック', 'Yu Gothic', YuGothic;
   }
   .service__title {
-    @include f_around(2.5, 2.5, 400, 100);
+    @include Global.f_around(2.5, 2.5, 400, 100);
   }
   .service__sub__title {
-    @include f_around(1.4, 1.4, 400, 240);
+    @include Global.f_around(1.4, 1.4, 400, 240);
     color: #858585;
   }
   .service__text {
-    @include f_around(1.4, 2, 300, 170);
+    @include Global.f_around(1.4, 2, 300, 170);
   }
   
   /* -------------------------------------
   レスポンシブ min-width: 637px; 
   ----------------------------------------*/
-  @include mq-up($breakpoint: md) {
+  @include Global.mq-up($breakpoint: md) {
     .service__item {
       width: 280PX;
       margin: 0;
@@ -77,6 +78,6 @@
     }
 
     .service__text {
-      @include f_around(1.6, 2, 300, 170);
+      @include Global.f_around(1.6, 2, 300, 170);
     }
   }

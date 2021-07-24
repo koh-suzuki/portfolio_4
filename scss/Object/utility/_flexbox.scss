@@ -1,3 +1,4 @@
+@use "../../Global";
 .service__flexbox {
   display: flex;
   flex-wrap: wrap;
@@ -7,7 +8,7 @@
 /* -------------------------------------
 レスポンシブ min-width: 638px; 
 ----------------------------------------*/
-@include mq-up($breakpoint: md) {
+@include Global.mq-up($breakpoint: md) {
   .service__flexbox {
     display: flex;
     flex-wrap: wrap;
