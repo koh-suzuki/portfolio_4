@@ -10,8 +10,7 @@
    # Global selectors
    # ================================================================= */
 html {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   overflow-y: scroll;
   /* All browsers without overlaying scrollbars */
   -webkit-text-size-adjust: 100%;
@@ -23,8 +22,7 @@ html {
 ::after {
   background-repeat: no-repeat;
   /* Set `background-repeat: no-repeat` to all elements */
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 ::before,
@@ -429,30 +427,17 @@ ul {
 }
 
 .flexbox__start {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 
 .flexbox__center {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-around;
 }
 
 /* # フォント
@@ -468,15 +453,9 @@ SP画面
 
 .l-header__inner {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  justify-content: space-between;
+  align-items: flex-start;
   min-width: 320px;
   margin: 0 auto;
   height: 100%;
@@ -495,14 +474,9 @@ SP画面
   position: absolute;
   bottom: 15%;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  display: -webkit-box;
-  display: -ms-flexbox;
+  transform: translateX(-50%);
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 .insta__item,
@@ -559,14 +533,9 @@ SP画面
     position: absolute;
     left: 80%;
     bottom: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    display: -webkit-box;
-    display: -ms-flexbox;
+    transform: translate(-50%, -50%);
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    align-items: center;
   }
 
   .insta__item,
@@ -587,12 +556,8 @@ SP画面
   }
 
   .header__list {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    align-items: center;
   }
 
   .header__item {
@@ -714,12 +679,8 @@ SP画面
 }
 
 .form-group__inner {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  align-items: flex-end;
 }
 
 .error {
@@ -789,12 +750,8 @@ SP画面
   }
 
   .form-group__inner {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
+    align-items: flex-end;
   }
 
   .error {
@@ -810,8 +767,7 @@ SP画面
   position: absolute;
   top: 30%;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 .thanks__wrapper {
@@ -982,17 +938,10 @@ SP画面
 .c-footer_inner {
   width: 90%;
   margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .footer_nav {
@@ -1056,17 +1005,10 @@ SP画面
   }
 
   .c-footer__flexbox {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
   }
 
   .c-footer__item {
@@ -1147,6 +1089,7 @@ SP画面
   color: transparent;
   top: 50%;
   -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
   transform: translate(0, -50%);
   padding: 0;
   border: none;
@@ -1275,10 +1218,10 @@ SP画面
 .slick-slider {
   position: relative;
   display: block;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
+  -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
@@ -1305,6 +1248,9 @@ SP画面
 .slick-slider .slick-track,
 .slick-slider .slick-list {
   -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
 
@@ -1370,8 +1316,7 @@ SP画面
   border: 0;
   padding: 0;
   clip: rect(0 0 0 0);
-  -webkit-clip-path: inset(50%);
-          clip-path: inset(50%);
+  clip-path: inset(50%);
 }
 
 .c-button {
@@ -1393,8 +1338,7 @@ SP画面
   width: 40px;
   height: 30px;
   border-radius: 50%;
-  -webkit-box-shadow: 0 0 2rem transparent;
-          box-shadow: 0 0 2rem transparent;
+  box-shadow: 0 0 2rem transparent;
   outline: none;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
@@ -1403,8 +1347,7 @@ SP画面
 
 .p-hamburger:hover,
 .p-hamburger:focus {
-  -webkit-box-shadow: 0 0 0.5rem rgba(255, 255, 255, 0.5);
-          box-shadow: 0 0 0.5rem rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 0.5rem rgba(255, 255, 255, 0.5);
 }
 
 .p-hamburger__line {
@@ -1453,13 +1396,9 @@ SP画面
   width: 100%;
   height: 100%;
   background-color: #fff;
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
+  transform: translateX(100%);
   -webkit-transition: transform 0.3s ease-in-out;
-  -webkit-transition: -webkit-transform 0.3s ease-in-out;
-  transition: -webkit-transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
 .p-hamburger[aria-expanded=true] .p-hamburger__line {
@@ -1467,8 +1406,7 @@ SP画面
 }
 
 .is-drawerActive .p-drawer {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
+  transform: translateX(0);
 }
 
 .p-hamburger[aria-expanded=true] .p-hamburger__line::before,
@@ -1479,11 +1417,13 @@ SP画面
 
 .p-hamburger[aria-expanded=true] .p-hamburger__line::before {
   -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
 .p-hamburger[aria-expanded=true] .p-hamburger__line::after {
   -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
 
@@ -1500,19 +1440,10 @@ SP画面
 }
 
 .hamburger__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 100%;
   background-color: white;
@@ -1520,8 +1451,7 @@ SP画面
 }
 
 .hamburger__nav.hamburger__list {
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 .hamburger__item {
@@ -1564,8 +1494,6 @@ SP画面
 }
 
 .nav-links {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -1575,8 +1503,7 @@ SP画面
   padding: 10px 15px;
   color: #333;
   border-radius: 3px;
-  -webkit-box-shadow: 0 3px 3px #999;
-          box-shadow: 0 3px 3px #999;
+  box-shadow: 0 3px 3px #999;
   background: #fff;
 }
 
@@ -1596,15 +1523,13 @@ SP画面
 .pnavi .prev,
 .pnavi .next {
   background: transparent;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
   color: #69a4db;
 }
 
 .pnavi .dots {
   background: transparent;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 
 .prev,
@@ -1651,9 +1576,7 @@ SP画面
   line-height: 1.6818181818;
   letter-spacing: 0.1em;
   color: #fff;
-  -webkit-writing-mode: vertical-rl;
-      -ms-writing-mode: tb-rl;
-          writing-mode: vertical-rl;
+  writing-mode: vertical-rl;
 }
 .concept__title > span {
   display: block;
@@ -1668,20 +1591,11 @@ SP画面
 
 .flex {
   /*Flexbox for containers*/
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 .waves {
@@ -1758,57 +1672,35 @@ SP画面
 
 /* Animation */
 .parallax > use {
-  -webkit-animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
-          animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+  animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
 }
 
 .parallax > use:nth-child(1) {
-  -webkit-animation-delay: -2s;
-          animation-delay: -2s;
-  -webkit-animation-duration: 7s;
-          animation-duration: 7s;
+  animation-delay: -2s;
+  animation-duration: 7s;
 }
 
 .parallax > use:nth-child(2) {
-  -webkit-animation-delay: -3s;
-          animation-delay: -3s;
-  -webkit-animation-duration: 10s;
-          animation-duration: 10s;
+  animation-delay: -3s;
+  animation-duration: 10s;
 }
 
 .parallax > use:nth-child(3) {
-  -webkit-animation-delay: -4s;
-          animation-delay: -4s;
-  -webkit-animation-duration: 13s;
-          animation-duration: 13s;
+  animation-delay: -4s;
+  animation-duration: 13s;
 }
 
 .parallax > use:nth-child(4) {
-  -webkit-animation-delay: -5s;
-          animation-delay: -5s;
-  -webkit-animation-duration: 20s;
-          animation-duration: 20s;
-}
-
-@-webkit-keyframes move-forever {
-  0% {
-    -webkit-transform: translate3d(-90px, 0, 0);
-            transform: translate3d(-90px, 0, 0);
-  }
-  100% {
-    -webkit-transform: translate3d(85px, 0, 0);
-            transform: translate3d(85px, 0, 0);
-  }
+  animation-delay: -5s;
+  animation-duration: 20s;
 }
 
 @keyframes move-forever {
   0% {
-    -webkit-transform: translate3d(-90px, 0, 0);
-            transform: translate3d(-90px, 0, 0);
+    transform: translate3d(-90px, 0, 0);
   }
   100% {
-    -webkit-transform: translate3d(85px, 0, 0);
-            transform: translate3d(85px, 0, 0);
+    transform: translate3d(85px, 0, 0);
   }
 }
 /* ===============================================*/
@@ -1840,9 +1732,7 @@ SP画面
     font-weight: 500;
     line-height: 1.2608695652;
     letter-spacing: 0.2em;
-    -webkit-writing-mode: unset;
-        -ms-writing-mode: unset;
-            writing-mode: unset;
+    writing-mode: unset;
     max-width: 750px;
   }
   .concept__title > span {
@@ -1857,16 +1747,9 @@ SP画面
   }
 }
 .about__wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   margin: 0 auto;
 }
 
@@ -1912,13 +1795,8 @@ SP画面
 }
 
 .about__inner {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 .about__name {
@@ -1961,16 +1839,9 @@ SP画面
 ----------------------------------------*/
 @media screen and (min-width: 637px) {
   .about__wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-orient: unset;
-    -webkit-box-direction: unset;
-        -ms-flex-direction: unset;
-            flex-direction: unset;
+    justify-content: space-between;
+    flex-direction: unset;
   }
 
   .c-about__catch {
@@ -2140,8 +2011,7 @@ SP画面
 .single_content_img,
 .works_content_item,
 .works__item {
-  -webkit-box-shadow: 0 0 8px gray;
-          box-shadow: 0 0 8px gray;
+  box-shadow: 0 0 8px gray;
 }
 
 .works_content_item {
@@ -2191,8 +2061,7 @@ SP画面
 
   .works_content_item > img,
 .works__item > img {
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
   .works_content_item > a,
 .works__item > a {
@@ -2201,8 +2070,7 @@ SP画面
   }
   .works_content_item > a > img,
 .works__item > a > img {
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     height: 100%;
   }
   .works_content_item > a:hover,
@@ -2258,12 +2126,8 @@ SP画面
 }
 
 .form-label {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 .badge {
@@ -2368,13 +2232,8 @@ SP画面
 }
 
 .single_content_inner {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: column-reverse;
-          flex-direction: column-reverse;
+  flex-direction: column-reverse;
   margin-bottom: 20px;
 }
 
@@ -2393,19 +2252,10 @@ SP画面
   }
 
   .single_content_inner {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: baseline;
-        -ms-flex-align: baseline;
-            align-items: baseline;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    align-items: baseline;
+    flex-direction: row;
+    justify-content: space-between;
     padding-bottom: 30px;
   }
 
@@ -2506,8 +2356,7 @@ SP画面
   position: fixed;
   left: 50%;
   top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   display: none;
   z-index: 9999;
   color: #000;
@@ -2525,19 +2374,13 @@ SP画面
     position: fixed;
     left: 50%;
     top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
   }
 }
 .service__flexbox {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  flex-wrap: wrap;
+  align-items: flex-start;
 }
 
 /* -------------------------------------
@@ -2545,17 +2388,10 @@ SP画面
 ----------------------------------------*/
 @media screen and (min-width: 637px) {
   .service__flexbox {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
   }
 }
 .section_title {
@@ -2577,4 +2413,3 @@ SP画面
 /* ===============================================*/
 /* # Foundation
 /*=============================================== */
-/*# sourceMappingURL=style.css.map */
